@@ -8,6 +8,8 @@ But everything I've tried so far has worked.
 
 Also, the code is not cleaned up yet and so far it's just a PoC.
 
+But there's a lot of content already in the [docs!](docs/en-us/PSGraylog.md)
+
 ### Why not use Auto Rest?
 
 Wanted to learn how to generate functions with Powershell code for another future project.
