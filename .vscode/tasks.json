@@ -1,0 +1,20 @@
+{
+    "version": "0.1.0",
+    "command": "powershell",
+    "args": [
+        "-ExecutionPolicy",
+        "Unrestricted",
+        "-NoProfile",
+        "-File",
+        "${cwd}/build.ps1"
+    ],
+    "taskSelector": "-task ",
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "build",
+            "showOutput": "always",
+            "isBuildCommand": true
+        }
+    ]
+}
