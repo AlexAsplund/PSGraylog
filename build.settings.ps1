@@ -8,7 +8,7 @@ Properties {
     # The root directories for the module's docs, src and test.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $DocsRootDir = "$PSScriptRoot\docs"
-    $SrcRootDir  = "$PSScriptRoot\src"
+    $SrcRootDir = "$PSScriptRoot\src"
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $TestRootDir = "$PSScriptRoot\test"
 
@@ -20,8 +20,8 @@ Properties {
     # The name of your module should match the basename of the PSD1 file.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $ModuleName = Get-Item $SrcRootDir/*.psd1 |
-                      Where-Object { $null -ne (Test-ModuleManifest -Path $_ -ErrorAction SilentlyContinue) } |
-                      Select-Object -First 1 | Foreach-Object BaseName
+    Where-Object { $null -ne (Test-ModuleManifest -Path $_ -ErrorAction SilentlyContinue) } |
+    Select-Object -First 1 | Foreach-Object BaseName
 
     # The $OutDir is where module files and updatable help files are staged for signing, install and publishing.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
@@ -30,7 +30,7 @@ Properties {
     # The local installation directory for the install task. Defaults to your home Modules location.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $InstallPath = Join-Path (Split-Path $profile.CurrentUserAllHosts -Parent) `
-                             "Modules\$ModuleName\$((Test-ModuleManifest -Path $SrcRootDir\$ModuleName.psd1).Version.ToString())"
+        "Modules\$ModuleName\$((Test-ModuleManifest -Path $SrcRootDir\$ModuleName.psd1).Version.ToString())"
     
     # Default Locale used for help generation, defaults to en-US.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
@@ -46,7 +46,7 @@ Properties {
 
     # Enable/disable use of PSScriptAnalyzer to perform script analysis.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $ScriptAnalysisEnabled = $true
+    $ScriptAnalysisEnabled = $false
 
     # When PSScriptAnalyzer is enabled, control which severity level will generate a build failure.
     # Valid values are Error, Warning, Information and None.  "None" will report errors but will not
@@ -85,7 +85,7 @@ Properties {
 
     # Certificate store path.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $ThumbPrint =  ((ls Cert:\CurrentUser\my) | ? {$_.EnhancedKeyUsageList.ObjectID -contains '1.3.6.1.5.5.7.3.3'}).Thumbprint
+    $ThumbPrint = ((ls Cert:\CurrentUser\my) | ? { $_.EnhancedKeyUsageList.ObjectID -contains '1.3.6.1.5.5.7.3.3' }).Thumbprint
     $CertPath = "Cert:\CurrentUser\my\$ThumbPrint"
 
     # -------------------- File catalog properties ----------------------------
@@ -155,10 +155,12 @@ Properties {
 # Executes before the StageFiles task.
 Task BeforeStageFiles {
     # Increment version number from gallery
-    Try{
+    Try
+    {
         $Moduleversion = (Find-Module -Repository $PublishRepository -Name $ModuleName).Version -join "."
     }
-    catch{
+    catch
+    {
         $ModuleVersion = "0.0.0"
     }
     
@@ -173,10 +175,10 @@ Task BeforeStageFiles {
 
     $ReleaseNotes = Get-Content $ReleaseNotesPath
 
-    $NewVersion = $MajorVersion,$MinorVersion,$PatchVersion -join "."
+    $NewVersion = $MajorVersion, $MinorVersion, $PatchVersion -join "."
 
 
-    $FunctionsToExport = (Get-Item "$SrcRootDir\Public*\*").name -replace "\.ps1$",""
+    $FunctionsToExport = (Get-Item "$SrcRootDir\Public*\*").name -replace "\.ps1$", ""
 
     Update-ModuleManifest -Path "$SrcRootDir\$ModuleName.psd1" -ModuleVersion $NewVersion -ReleaseNotes $ReleaseNotes -FunctionsToExport $FunctionsToExport
 
@@ -214,10 +216,11 @@ Task AfterBuildHelp {
 
     $Text = cat -Raw $PSScriptRoot\HelpIndexDescription.txt
 
-    foreach($file in $files){
+    foreach ($file in $files)
+    {
 
-        $description = ((cat $file.fullname)[2] + "`n") -replace "^\s+",""
-        $cmdletname = $file.name -replace "\.ps1",""
+        $description = ((cat $file.fullname)[2] + "`n") -replace "^\s+", ""
+        $cmdletname = $file.name -replace "\.ps1", ""
         
         $NextRowIsExample = $False
         $NextRowIsDescription = $False
@@ -226,7 +229,8 @@ Task AfterBuildHelp {
         $Descr = ""
 
         (cat $file.FullName) | foreach {
-            if($NextRowIsExample){
+            if ($NextRowIsExample)
+            {
 
                 $Example += "`n$_"
                 
@@ -235,7 +239,8 @@ Task AfterBuildHelp {
 
             }
 
-            if($_ -eq ".Example"){
+            if ($_ -eq ".Example")
+            {
 
                 $NextRowIsExample = $True
 
@@ -244,18 +249,20 @@ Task AfterBuildHelp {
         }
 
         $Example += "`n"
-        $Text+= "### [$cmdletname]($cmdletname.md)"
+        $Text += "### [$cmdletname]($cmdletname.md)"
         $Text += "`n`n#### Description:`n`n"
         $Text += "$Description"
         $Text += "`n#### Example:"
-        $text += $Example+"`n"
+        $text += $Example + "`n"
         $text += $cmdletinfo
     }
 
-    if(!$Debug) {
-        $Text | Out-File -FilePath "$PSScriptRoot\docs\en-us\$ModuleName" -Force
+    if (!$Debug)
+    {
+        $Text | Out-File -FilePath "$PSScriptRoot\docs\en-us\$ModuleName`.md" -Force
     }
-    else {
+    else
+    {
         $Text
     }
 }

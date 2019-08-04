@@ -11,46 +11,53 @@
 .NOTES
     Auto generated
 #>
-Function Get-GLClusterThreadDump {
+function Get-GLClusterThreadDump {
     [CmdletBinding()]
-    Param(
+    param(
         # The id of the node where processing will be paused.
-        [Parameter(Mandatory=$True)]
-        [String]$Nodeid,
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Nodeid,
 
         # Base url for the API, normally https://<grayloghost>:<port>/api
         [string]$APIUrl = $Global:GLApiUrl,
 
         # Graylog credentials as username:password or use Convert-GLTokenToCredential for token usage
-        [PSCredential]$Credential = $Global:GLCredential
-    
+        [pscredential]$Credential = $Global:GLCredential
+
     )
 
-    Begin{
-        if([string]::IsNullOrEmpty($APIUrl)) {
+    begin {
+        if ([string]::IsNullOrEmpty($APIUrl)) {
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
-        if($Null -eq $Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+        if ($Null -eq $Credential) {
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
-    Process {
-                
+    process {
+
         $QueryArray = @()
-        if(![string]::IsNullOrEmpty($Nodeid)){
-        $Nodeid = [system.web.httputility]::UrlEncode($Nodeid)
-        
-        $QueryArray += "nodeId=$Nodeid"
-    }    
-        
-        $Headers = @{Accept = 'application/json';'X-Requested-By'='PSGraylog Module'}
+        if (![string]::IsNullOrEmpty($Nodeid)) {
+            $Nodeid = [system.web.httputility]::UrlEncode($Nodeid)
+
+            $QueryArray += "nodeId=$Nodeid"
+        }
+
+        $Headers = @{ Accept = 'application/json'; 'X-Requested-By' = 'PSGraylog Module' }
         $APIPath = '/cluster/{nodeId}/threaddump'
-        $APIPath = $APIPath -Replace "\{Nodeid\}","$Nodeid" 
+        $APIPath = $APIPath -replace "\{Nodeid\}","$Nodeid"
         $QueryString = $QueryArray -join '&'
-        
-        Invoke-RestMethod -Method GET -Headers $Headers -ContentType 'application/json' -Uri ($APIUrl+$APIPath+"?"+$QueryString) -Credential $Credential
-        
+
+        try {
+            Invoke-RestMethod -Method GET -Headers $Headers -ContentType 'application/json' -Uri ($APIUrl + $APIPath + "?" + $QueryString) -Credential $Credential -ErrorAction Stop
+        }
+        catch {
+            Write-Error -Exception $Error[0].Exception -Message $Error[0].Message -ErrorAction $ErrorActionPreference
+
+        }
+
+
     }
-    End {}
+    end {}
 }

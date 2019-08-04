@@ -11,64 +11,79 @@
 .NOTES
     Auto generated
 #>
-Function Get-GLStreamAlerts {
+function Get-GLStreamAlerts {
     [CmdletBinding()]
-    Param(
+    param(
         # The stream id this new alert condition belongs to.
-        [Parameter(Mandatory=$True)]
-        [String]$Streamid,
-         # Optional parameter to define a lower date boundary. (UNIX timestamp)
-        [Parameter(Mandatory=$False)]
-        [Int]$Since,
-         # Maximum number of alerts to return.
-        [Parameter(Mandatory=$False)]
-        [Int]$Limit,
- 
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Streamid,
+        # Optional parameter to define a lower date boundary. (UNIX timestamp)
+        [Parameter(Mandatory = $False,ValueFromPipelineByPropertyName = $true)]
+        [int]$Since,
+        # Maximum number of alerts to return.
+        [Parameter(Mandatory = $False,ValueFromPipelineByPropertyName = $true)]
+        [int]$Limit,
+
         # Base url for the API, normally https://<grayloghost>:<port>/api
         [string]$APIUrl = $Global:GLApiUrl,
 
         # Graylog credentials as username:password or use Convert-GLTokenToCredential for token usage
-        [PSCredential]$Credential = $Global:GLCredential
-    
+        [pscredential]$Credential = $Global:GLCredential
+
     )
 
-    Begin{
-        if([string]::IsNullOrEmpty($APIUrl)) {
+    begin {
+        if ([string]::IsNullOrEmpty($APIUrl)) {
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
-        if($Null -eq $Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+        if ($Null -eq $Credential) {
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
-    Process {
-                
+    process {
+
         $QueryArray = @()
-        if(![string]::IsNullOrEmpty($Streamid)){
-        $Streamid = [system.web.httputility]::UrlEncode($Streamid)
-        
-        $QueryArray += "streamId=$Streamid"
-    }    
-        
-        if(![string]::IsNullOrEmpty($Since)){
-        
-        
-        $QueryArray += "since=$Since"
-    }    
-        
-        if(![string]::IsNullOrEmpty($Limit)){
-        
-        
-        $QueryArray += "limit=$Limit"
-    }    
-        
-        $Headers = @{Accept = 'application/json';'X-Requested-By'='PSGraylog Module'}
+        if (![string]::IsNullOrEmpty($Streamid)) {
+            $Streamid = [system.web.httputility]::UrlEncode($Streamid)
+
+            $QueryArray += "streamId=$Streamid"
+        }
+
+        if (![string]::IsNullOrEmpty($Since)) {
+
+
+            $QueryArray += "since=$Since"
+        }
+
+        if (![string]::IsNullOrEmpty($Limit)) {
+
+
+            $QueryArray += "limit=$Limit"
+        }
+
+        $Headers = @{ Accept = 'application/json'; 'X-Requested-By' = 'PSGraylog Module' }
         $APIPath = '/streams/{streamId}/alerts'
-        $APIPath = $APIPath -Replace "\{Streamid\}","$Streamid" 
+        $APIPath = $APIPath -replace "\{Streamid\}","$Streamid"
         $QueryString = $QueryArray -join '&'
-        
-        Invoke-RestMethod -Method GET -Headers $Headers -ContentType 'application/json' -Uri ($APIUrl+$APIPath+"?"+$QueryString) -Credential $Credential
-        
+
+        try {
+            Invoke-RestMethod -Method GET -Headers $Headers -ContentType 'application/json' -Uri ($APIUrl + $APIPath + "?" + $QueryString) -Credential $Credential -ErrorAction Stop
+        }
+        catch {
+            if ($Error[0].Exception.Response.StatusCode.value__ -eq 404) {
+                Write-Error -Exception $Error[0].Exception -Message "Stream not found." -ErrorAction $ErrorActionPreference
+            }
+            elseif ($Error[0].Exception.Response.StatusCode.value__ -eq 400) {
+                Write-Error -Exception $Error[0].Exception -Message "Invalid ObjectId." -ErrorAction $ErrorActionPreference
+            }
+            else {
+                Write-Error -Exception $Error[0].Exception -Message $Error[0].Message -ErrorAction $ErrorActionPreference
+            }
+
+        }
+
+
     }
-    End {}
+    end {}
 }

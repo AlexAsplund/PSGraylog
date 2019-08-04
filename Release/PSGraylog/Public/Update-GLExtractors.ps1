@@ -11,62 +11,87 @@
 .NOTES
     Auto generated
 #>
-Function Update-GLExtractors {
-    [CmdletBinding()]
-    Param(
+function Update-GLExtractors {
+    [CmdletBinding(SupportsShouldProcess,ConfirmImpact = 'Medium')]
+    param(
         # Parameter inputId
-        [Parameter(Mandatory=$True)]
-        [String]$Inputid,
-         # Parameter extractorId
-        [Parameter(Mandatory=$True)]
-        [String]$Extractorid,
-         # Parameter JSON body
-        [Parameter(Mandatory=$True)]
-        [PSCustomObject]$Body,
- 
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Inputid,
+        # Parameter extractorId
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Extractorid,
+        # Parameter JSON body
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [pscustomobject]$Body,
+
         # Base url for the API, normally https://<grayloghost>:<port>/api
         [string]$APIUrl = $Global:GLApiUrl,
 
         # Graylog credentials as username:password or use Convert-GLTokenToCredential for token usage
-        [PSCredential]$Credential = $Global:GLCredential
-    
+        [pscredential]$Credential = $Global:GLCredential
+
     )
 
-    Begin{
-        if([string]::IsNullOrEmpty($APIUrl)) {
+    begin {
+        if ([string]::IsNullOrEmpty($APIUrl)) {
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
-        if($Null -eq $Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+        if ($Null -eq $Credential) {
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
-    Process {
-                
-        $QueryArray = @()
-        if(![string]::IsNullOrEmpty($Inputid)){
-        $Inputid = [system.web.httputility]::UrlEncode($Inputid)
-        
-        $QueryArray += "inputId=$Inputid"
-    }    
-        
-        if(![string]::IsNullOrEmpty($Extractorid)){
-        $Extractorid = [system.web.httputility]::UrlEncode($Extractorid)
-        
-        $QueryArray += "extractorId=$Extractorid"
-    }    
-        
-        if(![string]::IsNullOrEmpty($Body)){
-        
-        
-        $QueryArray += "JSON body=$Body"
-    }    
-        
-        $Headers = @{Accept = 'application/json';'X-Requested-By'='PSGraylog Module'}
-        $APIPath = '/system/inputs/{inputId}/extractors/{extractorId}'
-        $APIPath = $APIPath -Replace "\{Inputid\}","$Inputid" 
-        $APIPath = $APIPath -Replace "\{Extractorid\}","$Extractorid" 
-        Invoke-RestMethod -Method PUT -Headers $Headers -ContentType 'application/json' -Uri "$APIUrl$APIPath" -Credential $Credential -Body ($Body | ConvertTo-Json)
+    process {
+        if ($PSCmdlet.ShouldProcess($Inputid,"Update an extractor")) {
+            $QueryArray = @()
+            if (![string]::IsNullOrEmpty($Inputid)) {
+                $Inputid = [system.web.httputility]::UrlEncode($Inputid)
+
+                $QueryArray += "inputId=$Inputid"
+            }
+
+            if (![string]::IsNullOrEmpty($Extractorid)) {
+                $Extractorid = [system.web.httputility]::UrlEncode($Extractorid)
+
+                $QueryArray += "extractorId=$Extractorid"
+            }
+
+            if (![string]::IsNullOrEmpty($Body)) {
+
+
+                $QueryArray += "JSON body=$Body"
+            }
+
+            $Headers = @{ Accept = 'application/json'; 'X-Requested-By' = 'PSGraylog Module' }
+            $APIPath = '/system/inputs/{inputId}/extractors/{extractorId}'
+            $APIPath = $APIPath -replace "\{Inputid\}","$Inputid"
+            $APIPath = $APIPath -replace "\{Extractorid\}","$Extractorid"
+            try {
+                Invoke-RestMethod -Method PUT -Headers $Headers -ContentType 'application/json' -Uri "$APIUrl$APIPath" -Credential $Credential -Body ($Body | ConvertTo-Json) -ErrorAction Stop
+            }
+            catch {
+                if ($Error[0].Exception.Response.StatusCode.value__ -eq 404) {
+                    Write-Error -Exception $Error[0].Exception -Message "No such input on this node." -ErrorAction $ErrorActionPreference
+                }
+                elseif ($Error[0].Exception.Response.StatusCode.value__ -eq 404) {
+                    Write-Error -Exception $Error[0].Exception -Message "No such extractor on this input." -ErrorAction $ErrorActionPreference
+                }
+                elseif ($Error[0].Exception.Response.StatusCode.value__ -eq 400) {
+                    Write-Error -Exception $Error[0].Exception -Message "No such extractor type." -ErrorAction $ErrorActionPreference
+                }
+                elseif ($Error[0].Exception.Response.StatusCode.value__ -eq 400) {
+                    Write-Error -Exception $Error[0].Exception -Message "Field the extractor should write on is reserved." -ErrorAction $ErrorActionPreference
+                }
+                elseif ($Error[0].Exception.Response.StatusCode.value__ -eq 400) {
+                    Write-Error -Exception $Error[0].Exception -Message "Missing or invalid configuration." -ErrorAction $ErrorActionPreference
+                }
+                else {
+                    Write-Error -Exception $Error[0].Exception -Message $Error[0].Message -ErrorAction $ErrorActionPreference
+                }
+
+            }
+
+        }
     }
-    End {}
+    end {}
 }

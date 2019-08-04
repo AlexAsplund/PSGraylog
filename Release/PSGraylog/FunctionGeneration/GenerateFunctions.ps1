@@ -5,8 +5,8 @@ param(
 )
 $TextInfo = (Get-Culture).TextInfo
 
-$APIPath =  ("$BaseUri"+"api")
-$APIDocRoot = ("$BaseUri"+"api-docs")
+$APIPath = ("$BaseUri" + "api")
+$APIDocRoot = ("$BaseUri" + "api/api-docs/")
 $DocRoot = Invoke-RestMethod -Uri $APIDocRoot
 
 
@@ -15,39 +15,44 @@ $DocRoot = Invoke-RestMethod -Uri $APIDocRoot
 $Apis = @()
 $DocRoot.apis | foreach {
     
-    $Obj = (Invoke-RestMethod ($APIDocRoot+$_.Path))
+    $Obj = (Invoke-RestMethod ($APIDocRoot + $_.Path))
     
     $APIs += [PSCustomObject]@{
-        APIs =  $Obj.apis
-        Context = ($_.Name -replace "[/ ]",'')
-        Models = $Obj.models.psobject.Properties.value | ? {$_.id -ne $null}
+        APIs    = $Obj.apis
+        Context = ($_.Name -replace "[/ ]", '')
+        Models  = $Obj.models.psobject.Properties.value | ? { $_.id -ne $null }
     }
     
 }
 
 # Create Model list
 $ModelList = @()
-$apis.models | group id | foreach {$_.group | select -first 1} | foreach {
+$apis.models | group id | foreach { $_.group | select -first 1 } | foreach {
     $ModelList += $_
 }
 
-Function Get-GLTranslatedId($Id) {
-    $NewId = $ID -replace 'urn:.+models:','' -replace ':',' ' -split " " | foreach {
-        if($_ -cmatch '^[a-z0-9]') {
+Function Get-GLTranslatedId($Id)
+{
+    $NewId = $ID -replace 'urn:.+models:', '' -replace ':', ' ' -split " " | foreach {
+        if ($_ -cmatch '^[a-z0-9]')
+        {
             $TextInfo.ToTitleCase($_)
         }
-        else{
+        else
+        {
             $_
         }
     } 
-    If($NewId -match 'request'){
+    If ($NewId -match 'request')
+    {
         $ModelType = "Request"
     }
-    else{
+    else
+    {
         $ModelType = "Response"
     }
-    $NewId = ($NewId | ? {$_ -notmatch '^(request|response)$'}) -join "" -creplace '[Rr]esponse[s].*|[Rr]equest[s]*','' 
-    $NewId =  'GrayLog'+($ModelType+$NewId) -replace ' ',''
+    $NewId = ($NewId | ? { $_ -notmatch '^(request|response)$' }) -join "" -creplace '[Rr]esponse[s].*|[Rr]equest[s]*', '' 
+    $NewId = 'GrayLog' + ($ModelType + $NewId) -replace ' ', ''
     Return $NewId
 }
 
@@ -58,10 +63,12 @@ $ModelList | foreach {
     $_ | Add-Member -MemberType NoteProperty -Name RealId -Value $_.Id -Force
     $_ | Add-Member -MemberType NoteProperty -Name Type -Value ($_.Id -split ":" | select -last 1) -Force
     $NewId = Get-GLTranslatedId -Id $_.Id
-    If($NewId -match 'request'){
+    If ($NewId -match 'request')
+    {
         $ModelType = "Request"
     }
-    else{
+    else
+    {
         $ModelType = "Response"
     }
 
@@ -72,7 +79,8 @@ $ModelList | foreach {
 }
 
 
-Function Create-GLClass {
+Function Create-GLClass
+{
     param(
         $ModelListObject
     )
@@ -84,9 +92,9 @@ Function Create-GLClass {
     
     $ModelListObject.properties.psobject.Properties | Foreach {
         $ParamObject = [PSCustomObject]@{
-            Name = $_.Name
-            Type = $_.value.type
-            Id = $_.value.id
+            Name       = $_.Name
+            Type       = $_.value.type
+            Id         = $_.value.id
             Additional = $_.value.additional_properties.type
          
         }
@@ -94,7 +102,7 @@ Function Create-GLClass {
         $Classname
         $OutArray += "    [$ClassName]`$$($ParamObject.Name)"
         $Parameters += [PSCustomObject]@{
-            Class = $ClassName
+            Class        = $ClassName
             VariableName = $ParamObject.Name
         }
     }
@@ -117,7 +125,7 @@ Function Create-GLClass {
     
 }
 
-$ModelList | ? {$_.ModelType -eq 'Request'}  | Group id | foreach{$_.Group | Select -First 1}  | Foreach {$_.id;Create-GLClass -ModelListObject $_}
+$ModelList | ? { $_.ModelType -eq 'Request' } | Group id | foreach { $_.Group | Select -First 1 } | Foreach { $_.id; Create-GLClass -ModelListObject $_ }
 $ClassString = ""
 ls .\Classes | Foreach {
     $ClassString += cat $_.FullName -Raw 
@@ -126,12 +134,19 @@ ls .\Classes | Foreach {
 rm .\Classes\Graylog*
 Set-Content -Path ".\Classes\GraylogAllClasses.ps1" -Value $ClassString
 
-Foreach ($Collection in $Apis ) {
-    $Collection.APIs | ? {$_.Operations -ne $null} | foreach {
-        New-GLFunction -SwaggerObject $_ -OutDir $OutDir -Context $Collection.Context
+$Functions = @()
+rm $Outdir\* 
+Foreach ($Collection in $Apis )
+{
+    $Collection.APIs | ? { $_.Operations -ne $null } | foreach {
+        Write-Output "Generating functions"
+        $Functions += New-GLFunction -SwaggerObject $_ -OutDir $OutDir -Context $Collection.Context
+        
     }
 }
-
-New-GLFunction -SwaggerObject $x[-2]  -OutDir . -Context TEST
-
-$X = $Apis.apis |? {$_.path -match 'lookup'} |? {$_.path -match 'caches/{idOrName}'}
+Write-Output "Beutify output"
+(ls $OutDir).FullName | foreach {
+    Write-Output $_
+    Edit-DTWBeautifyScript -SourcePath $_ -IndentType FourSpaces -NewLine CRLF
+}
+ 

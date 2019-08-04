@@ -11,52 +11,71 @@
 .NOTES
     Auto generated
 #>
-Function Get-GLDashboardsWidgetsAddWid {
-    [CmdletBinding()]
-    Param(
+function Get-GLDashboardsWidgetsAddWid {
+    [CmdletBinding(SupportsShouldProcess,ConfirmImpact = 'Medium')]
+    param(
         # Parameter dashboardId
-        [Parameter(Mandatory=$True)]
-        [String]$Dashboardid,
-         # Parameter JSON body
-        [Parameter(Mandatory=$True)]
-        [PSCustomObject]$Body,
- 
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Dashboardid,
+        # Parameter JSON body
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [pscustomobject]$Body,
+
         # Base url for the API, normally https://<grayloghost>:<port>/api
         [string]$APIUrl = $Global:GLApiUrl,
 
         # Graylog credentials as username:password or use Convert-GLTokenToCredential for token usage
-        [PSCredential]$Credential = $Global:GLCredential
-    
+        [pscredential]$Credential = $Global:GLCredential
+
     )
 
-    Begin{
-        if([string]::IsNullOrEmpty($APIUrl)) {
+    begin {
+        if ([string]::IsNullOrEmpty($APIUrl)) {
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
-        if($Null -eq $Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+        if ($Null -eq $Credential) {
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
-    Process {
-                
-        $QueryArray = @()
-        if(![string]::IsNullOrEmpty($Dashboardid)){
-        $Dashboardid = [system.web.httputility]::UrlEncode($Dashboardid)
-        
-        $QueryArray += "dashboardId=$Dashboardid"
-    }    
-        
-        if(![string]::IsNullOrEmpty($Body)){
-        
-        
-        $QueryArray += "JSON body=$Body"
-    }    
-        
-        $Headers = @{Accept = 'application/json';'X-Requested-By'='PSGraylog Module'}
-        $APIPath = '/dashboards/{dashboardId}/widgets'
-        $APIPath = $APIPath -Replace "\{Dashboardid\}","$Dashboardid" 
-        Invoke-RestMethod -Method POST -Headers $Headers -ContentType 'application/json' -Uri "$APIUrl$APIPath" -Credential $Credential -Body ($Body | ConvertTo-Json)
+    process {
+        if ($PSCmdlet.ShouldProcess($Dashboardid,"Add a widget to a dashboard")) {
+            $QueryArray = @()
+            if (![string]::IsNullOrEmpty($Dashboardid)) {
+                $Dashboardid = [system.web.httputility]::UrlEncode($Dashboardid)
+
+                $QueryArray += "dashboardId=$Dashboardid"
+            }
+
+            if (![string]::IsNullOrEmpty($Body)) {
+
+
+                $QueryArray += "JSON body=$Body"
+            }
+
+            $Headers = @{ Accept = 'application/json'; 'X-Requested-By' = 'PSGraylog Module' }
+            $APIPath = '/dashboards/{dashboardId}/widgets'
+            $APIPath = $APIPath -replace "\{Dashboardid\}","$Dashboardid"
+            try {
+                Invoke-RestMethod -Method POST -Headers $Headers -ContentType 'application/json' -Uri "$APIUrl$APIPath" -Credential $Credential -Body ($Body | ConvertTo-Json) -ErrorAction Stop
+            }
+            catch {
+                if ($Error[0].Exception.Response.StatusCode.value__ -eq 404) {
+                    Write-Error -Exception $Error[0].Exception -Message "Dashboard not found." -ErrorAction $ErrorActionPreference
+                }
+                elseif ($Error[0].Exception.Response.StatusCode.value__ -eq 400) {
+                    Write-Error -Exception $Error[0].Exception -Message "Validation error." -ErrorAction $ErrorActionPreference
+                }
+                elseif ($Error[0].Exception.Response.StatusCode.value__ -eq 400) {
+                    Write-Error -Exception $Error[0].Exception -Message "No such widget type." -ErrorAction $ErrorActionPreference
+                }
+                else {
+                    Write-Error -Exception $Error[0].Exception -Message $Error[0].Message -ErrorAction $ErrorActionPreference
+                }
+
+            }
+
+        }
     }
-    End {}
+    end {}
 }

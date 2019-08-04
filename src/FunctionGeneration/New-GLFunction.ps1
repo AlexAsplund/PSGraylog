@@ -52,7 +52,8 @@ Function New-GLFunction
         $SwaggerObject,
         $OutDir = $PSScriptRoot,
         $Context,
-        $Models
+        $Models,
+        [switch]$Print
     )
     $Prefix = "GL"
     $Operation = $SwaggerObject.Operations
@@ -169,6 +170,8 @@ Function New-GLFunction
             'Order' { $Verb = "Get" }
             'Install' { $Verb = "Install" }
             'Total number of messages' { $Verb = 'Get' }
+            'Export' { $Verb = 'Export' }
+            'Redirect' { $Verb = 'Send' }
         }
     }
     if ($Verb -eq $null)
@@ -228,7 +231,11 @@ Function New-GLFunction
         }    
         $UriParameters += $ParameterObject
     }
-    
+    # Should process support
+    if ($Operation.Method -match "POST|PUT|DELETE")
+    {
+        $ShouldProcess = $True
+    }
     
     # Parameter block
     $ParameterBlock = Foreach ($Parameter in ($Parameters | ? { $_ -ne $null }))
@@ -244,7 +251,7 @@ Function New-GLFunction
         }
         @"
         # $($Parameter.HelpInfo)
-        [Parameter(Mandatory=`$$($Parameter.Mandatory))]
+        [Parameter(Mandatory=`$$($Parameter.Mandatory),ValueFromPipelineByPropertyName=`$true)]
         [$($Parameter.Type)]`$$($Parameter.Name),
 
 "@
@@ -280,7 +287,43 @@ Function New-GLFunction
     {
         $ScriptBlock += "`$QueryString = `$QueryArray -join '&'"
         $ScriptBlock += ""
-        $ScriptBlock += "Invoke-RestMethod -Method $($Operation.Method) -Headers `$Headers -ContentType 'application/json' -Uri (`$APIUrl+`$APIPath+`"`?`"+`$QueryString) -Credential `$Credential"
+        $ScriptBlock += "Try {"
+        $ScriptBlock += "    Invoke-RestMethod -Method $($Operation.Method) -Headers `$Headers -ContentType 'application/json' -Uri (`$APIUrl+`$APIPath+`"`?`"+`$QueryString) -Credential `$Credential -ErrorAction Stop"
+        $ScriptBlock += "}"
+        $ScriptBlock += "Catch {"
+        if (($Operation.responseMessages | Measure-Object).count -gt 0)
+        {
+            $n = 0
+            $Operation.responseMessages | foreach {
+                
+                $Code = $Operation.responseMessages.code
+                $Message = $Operation.responseMessages.Message
+                if ($n -eq 0)
+                {
+                    $if = "if"   
+                }
+                else
+                {
+                    $if = "elseif"
+                }
+                $n++
+                
+                $ScriptBlock += "$if(`$Error[0].Exception.Response.StatusCode.value__ -eq $($_.Code)) {"
+                $ScriptBlock += "    Write-Error -Exception `$Error[0].Exception -Message `"$($_.Message)`" -ErrorAction `$ErrorActionPreference"
+                $ScriptBlock += "}"        
+            }
+            $ScriptBlock += "else {"
+            $ScriptBlock += "    Write-Error -Exception `$Error[0].Exception -Message `$Error[0].Message -ErrorAction `$ErrorActionPreference"
+            $ScriptBlock += "}"
+            
+            
+        }
+        else
+        {
+            $ScriptBlock += "    Write-Error -Exception `$Error[0].Exception -Message `$Error[0].Message -ErrorAction `$ErrorActionPreference"
+        }
+        $ScriptBlock += ""
+        $ScriptBlock += "}"
         $ScriptBlock += ""
     }
     else
@@ -307,8 +350,47 @@ Function New-GLFunction
             }
             
         }
-        $ScriptBlock += "Invoke-RestMethod -Method $($Operation.Method) -Headers `$Headers -ContentType 'application/json' -Uri `"`$APIUrl`$APIPath`" -Credential `$Credential $Body"
+        $ScriptBlock += "Try {"
+        $ScriptBlock += "Invoke-RestMethod -Method $($Operation.Method) -Headers `$Headers -ContentType 'application/json' -Uri `"`$APIUrl`$APIPath`" -Credential `$Credential $Body -ErrorAction Stop"
+        $ScriptBlock += "}"
+        $ScriptBlock += "Catch {"
+        if (($Operation.responseMessages | Measure-Object).count -gt 0)
+        {
+            $n = 0
+            $Operation.responseMessages | foreach {
+                $Code = $Operation.responseMessages.code
+                $Message = $Operation.responseMessages.Message
+                if ($n -eq 0)
+                {
+                    $if = "if"   
+                }
+                else
+                {
+                    $if = "elseif"
+                }
+                $n++
+                
+                $ScriptBlock += "$if(`$Error[0].Exception.Response.StatusCode.value__ -eq $($_.Code)) {"
+                $ScriptBlock += "    Write-Error -Exception `$Error[0].Exception -Message `"$($_.Message)`" -ErrorAction `$ErrorActionPreference"
+                $ScriptBlock += "}"              
+            }
+            $ScriptBlock += "else {"
+            $ScriptBlock += "    Write-Error -Exception `$Error[0].Exception -Message `$Error[0].Message -ErrorAction `$ErrorActionPreference"
+            $ScriptBlock += "}"
+            
+        }
+        else
+        {
+            $ScriptBlock += "    Write-Error -Exception `$Error[0].Exception -Message `$Error[0].Message -ErrorAction `$ErrorActionPreference"
+        }
+
+        $ScriptBlock += ""
+        $ScriptBlock += "}"
+        $ScriptBlock += ""
+        
     }
+
+
     $ExampleParameters = $Parameters | Foreach {
         "-" + $_.Name + " <" + $_.Type + ">"
     }
@@ -328,7 +410,7 @@ Function New-GLFunction
     Auto generated
 #>
 Function $($CmdletName) {
-    [CmdletBinding()]
+    [CmdletBinding($(if($ShouldProcess){"SupportsShouldProcess, ConfirmImpact='Medium'"}))]
     Param(
 $ParameterBlock
     )
@@ -338,42 +420,131 @@ $ParameterBlock
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
         if(`$Null -eq `$Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
     Process {
-        $($ScriptBlock -replace "^","        " -join "`n")
+        $(
+            if($ShouldProcess) {
+                $descr = $Operation.summary
+                if([string]::IsNullOrWhiteSpace($Descr)){
+                    $descr = $cmdletname
+                }
+                $Target = '$'+$Parameters[0].name
+                if([string]::IsNullOrEmpty($Parameters[0].name)) {
+                    $Target = "`"All?`""
+                }
+                'if ($PSCmdlet.ShouldProcess('+$Target+',"'+$descr+'")) {'
+            }
+        )
+        $($ScriptBlock -join "`n" -replace '\}\s*$',"}`n" -replace "\{\s*$","{`n" -replace "^\s*",'        ')
+        $(
+            if($ShouldProcess) {'}'}
+        )
     }
     End {}
 }
 "@
-    $OutFile = "$OutDir\$Cmdletname.ps1"
-    if (Test-Path $OutFile)
+    #$Function = Format-Intendation -Script $Function
+  
+    if ($Print)
     {
-        #Set-Content -Value $Function -Path "$OutDir\$Cmdletname-collide.ps1" -Encoding UTF8
-        $NewFile = ($OutFile -replace '\.ps1', 'All.ps1')
-        $NewCmdletName = $CmdletName + "All"
-
-        $PathLength = (($Function | Select-String "\`$ApiPath *= *'(/.*)'").Matches.groups | ? { $_.Name -eq 1 }).Length
-        $CollidedPathLength = (($OutFile | Select-String "\`$ApiPath *= *'(/.*)'").Matches.groups | ? { $_.Name -eq 1 }).length
-
-        if ($CollidedPathLength -lt $PathLength)
+        Write-Output $Function
+    }
+    else
+    {
+        $OutFile = "$OutDir\$Cmdletname.ps1"
+        if (Test-Path $OutFile)
         {
-            mv $OutFile  $NewFile
-            $NewVal = (Cat -Raw $NewFile) -replace $CmdletName, $NewCmdletName
-            Set-Content -Path $NewFile -Value $NewVal
+            #Set-Content -Value $Function -Path "$OutDir\$Cmdletname-collide.ps1" -Encoding UTF8
+            $NewFile = ($OutFile -replace '\.ps1', 'All.ps1')
+            $NewCmdletName = $CmdletName + "All"
+
+            $PathLength = (($Function | Select-String "\`$ApiPath *= *'(/.*)'").Matches.groups | ? { $_.Name -eq 1 }).Length
+            $CollidedPathLength = (($OutFile | Select-String "\`$ApiPath *= *'(/.*)'").Matches.groups | ? { $_.Name -eq 1 }).length
+
+            if ($CollidedPathLength -lt $PathLength)
+            {
+                mv $OutFile  $NewFile
+                $NewVal = (Cat -Raw $NewFile) -replace $CmdletName, $NewCmdletName
+                Set-Content -Path $NewFile -Value $NewVal
+                Set-Content -Value $Function -Path "$OutDir\$Cmdletname.ps1" -Encoding UTF8
+            }
+            else
+            {
+                $CmdletName = $NewCmdletName
+                Set-Content -Value $Function -Path "$OutDir\$Cmdletname.ps1" -Encoding UTF8    
+            }
+        }   
+        else
+        {
             Set-Content -Value $Function -Path "$OutDir\$Cmdletname.ps1" -Encoding UTF8
+        }
+    }
+    
+}
+Function Format-Intendation
+{
+    param(
+        [string]$Script
+    )
+    $n = 0
+    $out = @()
+    $param = $false
+    $ParamEnd = $false
+    $prev = ""
+
+    $Script -split "`n" | foreach {
+        $space = $spacenext
+        if ($_ -match "\{" -and $_ -notmatch "\@\{[\}]*")
+        {
+            $n++
+        }
+        if ($_ -match "\}" -and $_ -notmatch "\@\{\}")
+        {
+            $n--
+        }
+
+        # Detect param
+        if ($_ -match "Param\(\s*$" -and $Param -eq $false -and $ParamEnd -ne $true)
+        {
+    
+            $Param = $true
+            $n++
+        }
+        if ($Param -eq $true -and $_ -match '^\s*\)$')
+        {
+            $Param = $false
+            $ParamEnd = $True
+            Write-Warning "param end"
+            $n--
+        }
+        if ($n -lt 0)
+        {
+            $n = 0
+        }
+        $spacenext = "    " * $n
+        if ($_ -match "^\s*\}\s*$" -or ($ParamEnd -eq $true -and $_ -match '^\s*\)\s*$'))
+        {
+            $out += $_ -replace "^[ ]+", $spacenext
         }
         else
         {
-            $CmdletName = $NewCmdletName
-            Set-Content -Value $Function -Path "$OutDir\$Cmdletname.ps1" -Encoding UTF8    
+            
+            if ($Prev -cmatch "^\.[A-Z]+")
+            {
+                $out += $_ -replace "^[ ]+", "    "
+            }
+            else
+            {
+                $out += $_ -replace "^[ ]+", $space
+            }
+            
         }
-    }   
-    else
-    {
-        Set-Content -Value $Function -Path "$OutDir\$Cmdletname.ps1" -Encoding UTF8
+        $prev = $_
+        
     }
-    
+
+    $out -join "`n"
 }

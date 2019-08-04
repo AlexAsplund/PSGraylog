@@ -11,53 +11,61 @@
 .NOTES
     Auto generated
 #>
-Function Revoke-GLUsersToken {
-    [CmdletBinding()]
-    Param(
+function Revoke-GLUsersToken {
+    [CmdletBinding(SupportsShouldProcess,ConfirmImpact = 'Medium')]
+    param(
         # Parameter username
-        [Parameter(Mandatory=$True)]
-        [String]$Username,
-         # Parameter token
-        [Parameter(Mandatory=$True)]
-        [String]$Token,
- 
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Username,
+        # Parameter token
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Token,
+
         # Base url for the API, normally https://<grayloghost>:<port>/api
         [string]$APIUrl = $Global:GLApiUrl,
 
         # Graylog credentials as username:password or use Convert-GLTokenToCredential for token usage
-        [PSCredential]$Credential = $Global:GLCredential
-    
+        [pscredential]$Credential = $Global:GLCredential
+
     )
 
-    Begin{
-        if([string]::IsNullOrEmpty($APIUrl)) {
+    begin {
+        if ([string]::IsNullOrEmpty($APIUrl)) {
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
-        if($Null -eq $Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+        if ($Null -eq $Credential) {
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
-    Process {
-                
-        $QueryArray = @()
-        if(![string]::IsNullOrEmpty($Username)){
-        $Username = [system.web.httputility]::UrlEncode($Username)
-        
-        $QueryArray += "username=$Username"
-    }    
-        
-        if(![string]::IsNullOrEmpty($Token)){
-        $Token = [system.web.httputility]::UrlEncode($Token)
-        
-        $QueryArray += "token=$Token"
-    }    
-        
-        $Headers = @{Accept = 'application/json';'X-Requested-By'='PSGraylog Module'}
-        $APIPath = '/users/{username}/tokens/{token}'
-        $APIPath = $APIPath -Replace "\{Username\}","$Username" 
-        $APIPath = $APIPath -Replace "\{Token\}","$Token" 
-        Invoke-RestMethod -Method DELETE -Headers $Headers -ContentType 'application/json' -Uri "$APIUrl$APIPath" -Credential $Credential 
+    process {
+        if ($PSCmdlet.ShouldProcess($Username,"Removes a token for a user")) {
+            $QueryArray = @()
+            if (![string]::IsNullOrEmpty($Username)) {
+                $Username = [system.web.httputility]::UrlEncode($Username)
+
+                $QueryArray += "username=$Username"
+            }
+
+            if (![string]::IsNullOrEmpty($Token)) {
+                $Token = [system.web.httputility]::UrlEncode($Token)
+
+                $QueryArray += "token=$Token"
+            }
+
+            $Headers = @{ Accept = 'application/json'; 'X-Requested-By' = 'PSGraylog Module' }
+            $APIPath = '/users/{username}/tokens/{token}'
+            $APIPath = $APIPath -replace "\{Username\}","$Username"
+            $APIPath = $APIPath -replace "\{Token\}","$Token"
+            try {
+                Invoke-RestMethod -Method DELETE -Headers $Headers -ContentType 'application/json' -Uri "$APIUrl$APIPath" -Credential $Credential -ErrorAction Stop
+            }
+            catch {
+                Write-Error -Exception $Error[0].Exception -Message $Error[0].Message -ErrorAction $ErrorActionPreference
+
+            }
+
+        }
     }
-    End {}
+    end {}
 }

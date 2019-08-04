@@ -11,53 +11,66 @@
 .NOTES
     Auto generated
 #>
-Function Remove-GLStreamOutputs {
-    [CmdletBinding()]
-    Param(
+function Remove-GLStreamOutputs {
+    [CmdletBinding(SupportsShouldProcess,ConfirmImpact = 'Medium')]
+    param(
         # The id of the stream whose outputs we want.
-        [Parameter(Mandatory=$True)]
-        [String]$Streamid,
-         # The id of the output that should be deleted
-        [Parameter(Mandatory=$True)]
-        [String]$Outputid,
- 
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Streamid,
+        # The id of the output that should be deleted
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Outputid,
+
         # Base url for the API, normally https://<grayloghost>:<port>/api
         [string]$APIUrl = $Global:GLApiUrl,
 
         # Graylog credentials as username:password or use Convert-GLTokenToCredential for token usage
-        [PSCredential]$Credential = $Global:GLCredential
-    
+        [pscredential]$Credential = $Global:GLCredential
+
     )
 
-    Begin{
-        if([string]::IsNullOrEmpty($APIUrl)) {
+    begin {
+        if ([string]::IsNullOrEmpty($APIUrl)) {
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
-        if($Null -eq $Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+        if ($Null -eq $Credential) {
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
-    Process {
-                
-        $QueryArray = @()
-        if(![string]::IsNullOrEmpty($Streamid)){
-        $Streamid = [system.web.httputility]::UrlEncode($Streamid)
-        
-        $QueryArray += "streamid=$Streamid"
-    }    
-        
-        if(![string]::IsNullOrEmpty($Outputid)){
-        $Outputid = [system.web.httputility]::UrlEncode($Outputid)
-        
-        $QueryArray += "outputId=$Outputid"
-    }    
-        
-        $Headers = @{Accept = 'application/json';'X-Requested-By'='PSGraylog Module'}
-        $APIPath = '/streams/{streamid}/outputs/{outputId}'
-        $APIPath = $APIPath -Replace "\{Streamid\}","$Streamid" 
-        $APIPath = $APIPath -Replace "\{Outputid\}","$Outputid" 
-        Invoke-RestMethod -Method DELETE -Headers $Headers -ContentType 'application/json' -Uri "$APIUrl$APIPath" -Credential $Credential 
+    process {
+        if ($PSCmdlet.ShouldProcess($Streamid,"Delete output of a stream")) {
+            $QueryArray = @()
+            if (![string]::IsNullOrEmpty($Streamid)) {
+                $Streamid = [system.web.httputility]::UrlEncode($Streamid)
+
+                $QueryArray += "streamid=$Streamid"
+            }
+
+            if (![string]::IsNullOrEmpty($Outputid)) {
+                $Outputid = [system.web.httputility]::UrlEncode($Outputid)
+
+                $QueryArray += "outputId=$Outputid"
+            }
+
+            $Headers = @{ Accept = 'application/json'; 'X-Requested-By' = 'PSGraylog Module' }
+            $APIPath = '/streams/{streamid}/outputs/{outputId}'
+            $APIPath = $APIPath -replace "\{Streamid\}","$Streamid"
+            $APIPath = $APIPath -replace "\{Outputid\}","$Outputid"
+            try {
+                Invoke-RestMethod -Method DELETE -Headers $Headers -ContentType 'application/json' -Uri "$APIUrl$APIPath" -Credential $Credential -ErrorAction Stop
+            }
+            catch {
+                if ($Error[0].Exception.Response.StatusCode.value__ -eq 404) {
+                    Write-Error -Exception $Error[0].Exception -Message "No such stream/output on this node." -ErrorAction $ErrorActionPreference
+                }
+                else {
+                    Write-Error -Exception $Error[0].Exception -Message $Error[0].Message -ErrorAction $ErrorActionPreference
+                }
+
+            }
+
+        }
     }
-    End {}
+    end {}
 }

@@ -11,46 +11,58 @@
 .NOTES
     Auto generated
 #>
-Function Get-GLSystemInputsTypesInfo {
+function Get-GLSystemInputsTypesInfo {
     [CmdletBinding()]
-    Param(
+    param(
         # Parameter inputType
-        [Parameter(Mandatory=$True)]
-        [String]$Inputtype,
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [string]$Inputtype,
 
         # Base url for the API, normally https://<grayloghost>:<port>/api
         [string]$APIUrl = $Global:GLApiUrl,
 
         # Graylog credentials as username:password or use Convert-GLTokenToCredential for token usage
-        [PSCredential]$Credential = $Global:GLCredential
-    
+        [pscredential]$Credential = $Global:GLCredential
+
     )
 
-    Begin{
-        if([string]::IsNullOrEmpty($APIUrl)) {
+    begin {
+        if ([string]::IsNullOrEmpty($APIUrl)) {
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
-        if($Null -eq $Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+        if ($Null -eq $Credential) {
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
-    Process {
-                
+    process {
+
         $QueryArray = @()
-        if(![string]::IsNullOrEmpty($Inputtype)){
-        $Inputtype = [system.web.httputility]::UrlEncode($Inputtype)
-        
-        $QueryArray += "inputType=$Inputtype"
-    }    
-        
-        $Headers = @{Accept = 'application/json';'X-Requested-By'='PSGraylog Module'}
+        if (![string]::IsNullOrEmpty($Inputtype)) {
+            $Inputtype = [system.web.httputility]::UrlEncode($Inputtype)
+
+            $QueryArray += "inputType=$Inputtype"
+        }
+
+        $Headers = @{ Accept = 'application/json'; 'X-Requested-By' = 'PSGraylog Module' }
         $APIPath = '/system/inputs/types/{inputType}'
-        $APIPath = $APIPath -Replace "\{Inputtype\}","$Inputtype" 
+        $APIPath = $APIPath -replace "\{Inputtype\}","$Inputtype"
         $QueryString = $QueryArray -join '&'
-        
-        Invoke-RestMethod -Method GET -Headers $Headers -ContentType 'application/json' -Uri ($APIUrl+$APIPath+"?"+$QueryString) -Credential $Credential
-        
+
+        try {
+            Invoke-RestMethod -Method GET -Headers $Headers -ContentType 'application/json' -Uri ($APIUrl + $APIPath + "?" + $QueryString) -Credential $Credential -ErrorAction Stop
+        }
+        catch {
+            if ($Error[0].Exception.Response.StatusCode.value__ -eq 404) {
+                Write-Error -Exception $Error[0].Exception -Message "No such input type registered." -ErrorAction $ErrorActionPreference
+            }
+            else {
+                Write-Error -Exception $Error[0].Exception -Message $Error[0].Message -ErrorAction $ErrorActionPreference
+            }
+
+        }
+
+
     }
-    End {}
+    end {}
 }

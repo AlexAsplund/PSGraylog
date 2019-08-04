@@ -11,55 +11,67 @@
 .NOTES
     Auto generated
 #>
-Function Get-GLSources {
+function Get-GLSources {
     [CmdletBinding()]
-    Param(
+    param(
         # Relative timeframe to search in. See method description.
-        [Parameter(Mandatory=$True)]
-        [Int]$Range,
-         # Maximum size of the result set.
-        [Parameter(Mandatory=$False)]
-        [Int]$Size,
- 
+        [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
+        [int]$Range,
+        # Maximum size of the result set.
+        [Parameter(Mandatory = $False,ValueFromPipelineByPropertyName = $true)]
+        [int]$Size,
+
         # Base url for the API, normally https://<grayloghost>:<port>/api
         [string]$APIUrl = $Global:GLApiUrl,
 
         # Graylog credentials as username:password or use Convert-GLTokenToCredential for token usage
-        [PSCredential]$Credential = $Global:GLCredential
-    
+        [pscredential]$Credential = $Global:GLCredential
+
     )
 
-    Begin{
-        if([string]::IsNullOrEmpty($APIUrl)) {
+    begin {
+        if ([string]::IsNullOrEmpty($APIUrl)) {
             Write-Error -ErrorAction Stop -Exception "APIUrl not set" -Message "APIUrl was null or empty, refer to the documentation"
         }
-        if($Null -eq $Credential){
-            Write-Error -ErrorAction -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
+        if ($Null -eq $Credential) {
+            Write-Error -ErrorAction Stop -Exception "Credential not set" -Message "Credential not set - refer to the documentation for help"
         }
     }
 
-    Process {
-                
+    process {
+
         $QueryArray = @()
-        if(![string]::IsNullOrEmpty($Range)){
-        
-        
-        $QueryArray += "range=$Range"
-    }    
-        
-        if(![string]::IsNullOrEmpty($Size)){
-        
-        
-        $QueryArray += "size=$Size"
-    }    
-        
-        $Headers = @{Accept = 'application/json';'X-Requested-By'='PSGraylog Module'}
+        if (![string]::IsNullOrEmpty($Range)) {
+
+
+            $QueryArray += "range=$Range"
+        }
+
+        if (![string]::IsNullOrEmpty($Size)) {
+
+
+            $QueryArray += "size=$Size"
+        }
+
+        $Headers = @{ Accept = 'application/json'; 'X-Requested-By' = 'PSGraylog Module' }
         $APIPath = '/sources'
-        $APIPath = $APIPath -Replace "\{\}","$" 
+        $APIPath = $APIPath -replace "\{\}","$"
         $QueryString = $QueryArray -join '&'
-        
-        Invoke-RestMethod -Method GET -Headers $Headers -ContentType 'application/json' -Uri ($APIUrl+$APIPath+"?"+$QueryString) -Credential $Credential
-        
+
+        try {
+            Invoke-RestMethod -Method GET -Headers $Headers -ContentType 'application/json' -Uri ($APIUrl + $APIPath + "?" + $QueryString) -Credential $Credential -ErrorAction Stop
+        }
+        catch {
+            if ($Error[0].Exception.Response.StatusCode.value__ -eq 400) {
+                Write-Error -Exception $Error[0].Exception -Message "Invalid range parameter provided." -ErrorAction $ErrorActionPreference
+            }
+            else {
+                Write-Error -Exception $Error[0].Exception -Message $Error[0].Message -ErrorAction $ErrorActionPreference
+            }
+
+        }
+
+
     }
-    End {}
+    end {}
 }
