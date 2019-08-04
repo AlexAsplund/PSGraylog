@@ -136,10 +136,12 @@ Set-Content -Path ".\Classes\GraylogAllClasses.ps1" -Value $ClassString
 
 $Functions = @()
 rm $Outdir\* 
+
+Write-Output "Generating functions"
 Foreach ($Collection in $Apis )
 {
     $Collection.APIs | ? { $_.Operations -ne $null } | foreach {
-        Write-Output "Generating functions"
+
         $Functions += New-GLFunction -SwaggerObject $_ -OutDir $OutDir -Context $Collection.Context
         
     }

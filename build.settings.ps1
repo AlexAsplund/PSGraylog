@@ -157,13 +157,17 @@ Task BeforeStageFiles {
     # Increment version number from gallery
     Try
     {
-        $Moduleversion = (Find-Module -Repository $PublishRepository -Name $ModuleName).Version -join "."
+        $Moduleversion = (Import-PowershellDataFile -Path "$SrcRootDir\$ModuleName.psd1").ModuleVersion
     }
     catch
     {
         $ModuleVersion = "0.0.0"
     }
     
+    If ($Env:psakeForceVersion -ne $null)
+    {
+        $Moduleversion = $Env:psakeForceVersion
+    }
 
     $ModuleVersion = $Moduleversion -split "\."
 
