@@ -1,3 +1,8 @@
 # Install description
 
-Clone the repo and copy Releases/PSGraylog into a $env:PSModulePath of your choice.
+``` powershell
+
+    Invoke-RestMethod https://github.com/AlexAsplund/PSGraylog/releases/download/0.0.3/PSGraylog-0.0.3.zip -OutFile .\PSGraylog-0.0.3.zip
+    Expand-Archive -Path .\PSGraylog-0.0.3.zip -DestinationPath <your module dir>
+
+```
