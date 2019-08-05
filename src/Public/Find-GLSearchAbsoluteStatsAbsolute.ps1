@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Field statistics for a query using an absolute timerange.
 .DESCRIPTION

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all configuration variables
 .DESCRIPTION
     List all configuration variables
-    
+
 
     For more information about this cmdlet - please search for /sidecar/configuration_variables in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSidecarConfigurationVariablesConfigurationVariables 
+    Get-GLSidecarConfigurationVariablesConfigurationVariables
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create a stream
 .DESCRIPTION
     Create a stream
-    
+
 
     For more information about this cmdlet - please search for /streams in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

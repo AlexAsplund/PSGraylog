@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all used tags
 .DESCRIPTION
     List all used tags
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/configurations/tags in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLPluginsCollectorConfigurationTags 
+    Get-GLPluginsCollectorConfigurationTags
 .NOTES
     Auto generated
 #>

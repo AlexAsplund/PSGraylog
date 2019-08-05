@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Total count of failed index operations since the given date.
 .DESCRIPTION
     Total count of failed index operations since the given date.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/failures/count in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

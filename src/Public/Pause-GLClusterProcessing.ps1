@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Pause message processing on node
 .DESCRIPTION

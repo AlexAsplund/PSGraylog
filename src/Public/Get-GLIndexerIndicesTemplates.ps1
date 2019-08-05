@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get index template for the given index set
 .DESCRIPTION
     Get index template for the given index set
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/templates/{indexSetId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

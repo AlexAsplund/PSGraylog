@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Update a configuration output
 .DESCRIPTION

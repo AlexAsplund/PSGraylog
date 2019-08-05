@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Parse a processing rule without saving it
 .DESCRIPTION
     Parse a processing rule without saving it
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/rule/parse in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

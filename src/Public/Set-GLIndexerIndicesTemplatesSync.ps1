@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Updates the index template for the given index set in Elasticsearch
 .DESCRIPTION
     Updates the index template for the given index set in Elasticsearch
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/templates/{indexSetId}/update in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

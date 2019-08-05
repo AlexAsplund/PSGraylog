@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Field value histogram of a query using a relative timerange.
 .DESCRIPTION
     Field value histogram of a query using a relative timerange.
-    
+
 
     For more information about this cmdlet - please search for /search/universal/relative/fieldhistogram in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

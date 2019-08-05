@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete a notification
 .DESCRIPTION
     Delete a notification
-    
+
 
     For more information about this cmdlet - please search for /system/notifications/{notificationType} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

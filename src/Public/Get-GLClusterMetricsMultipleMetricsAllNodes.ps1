@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all metrics of all nodes in the cluster
 .DESCRIPTION
     Get all metrics of all nodes in the cluster
-    
+
 
     For more information about this cmdlet - please search for /cluster/metrics/multiple in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

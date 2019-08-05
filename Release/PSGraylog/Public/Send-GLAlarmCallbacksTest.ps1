@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Send a test alert for a given alarm callback
 .DESCRIPTION
     Send a test alert for a given alarm callback
-    
+
 
     For more information about this cmdlet - please search for /alerts/callbacks/{alarmCallbackId}/test in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

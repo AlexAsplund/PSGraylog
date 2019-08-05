@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create an alarm callback
 .DESCRIPTION
     Create an alarm callback
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/alarmcallbacks in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get current deflector status
 .DESCRIPTION
     Get current deflector status
-    
+
 
     For more information about this cmdlet - please search for /system/deflector in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemDeflectorDeprecatedDeflector 
+    Get-GLSystemDeflectorDeprecatedDeflector
 .NOTES
     Auto generated
 #>

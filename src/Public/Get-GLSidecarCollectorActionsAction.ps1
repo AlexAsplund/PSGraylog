@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Returns queued actions for the specified Sidecar id
 .DESCRIPTION
     Returns queued actions for the specified Sidecar id
-    
+
 
     For more information about this cmdlet - please search for /sidecar/action/{sidecarId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

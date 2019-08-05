@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Filesystem information about this node.
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/stats/fs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemStatsFsStats 
+    Get-GLSystemStatsFsStats
 .NOTES
     Auto generated
 #>

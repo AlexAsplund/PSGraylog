@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Render configuration template
 .DESCRIPTION
     Render configuration template
-    
+
 
     For more information about this cmdlet - please search for /sidecar/configurations/render/{sidecarId}/{configurationId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

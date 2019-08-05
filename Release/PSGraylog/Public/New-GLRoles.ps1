@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create a new role
 .DESCRIPTION
     Create a new role
-    
+
 
     For more information about this cmdlet - please search for /roles in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

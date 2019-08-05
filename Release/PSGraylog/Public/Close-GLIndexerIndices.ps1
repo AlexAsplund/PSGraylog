@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Close an index. This will also trigger an index ranges rebuild job.
 .DESCRIPTION
     Close an index. This will also trigger an index ranges rebuild job.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/{index}/close in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

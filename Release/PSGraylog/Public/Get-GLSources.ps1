@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of all sources (not more than 5000) that have messages in the current indices. The result is cached for 10 seconds.
 .DESCRIPTION

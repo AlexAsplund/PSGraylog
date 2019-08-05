@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a single stream rules
 .DESCRIPTION
     Get a single stream rules
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/rules/{streamRuleId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

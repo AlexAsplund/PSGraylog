@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update the LDAP configuration
 .DESCRIPTION
     Update the LDAP configuration
-    
+
 
     For more information about this cmdlet - please search for /system/ldap/settings in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

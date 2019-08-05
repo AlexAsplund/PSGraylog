@@ -3,11 +3,11 @@
     Get all input states of this node
 .DESCRIPTION
     Get all input states of this node
-    
+
 
     For more information about this cmdlet - please search for /system/inputstates in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemInputStatesAll 
+    Get-GLSystemInputStatesAll
 .NOTES
     Auto generated
 #>

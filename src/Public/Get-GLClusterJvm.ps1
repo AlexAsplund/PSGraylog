@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get JVM information of the given node
 .DESCRIPTION
     Get JVM information of the given node
-    
+
 
     For more information about this cmdlet - please search for /cluster/{nodeId}/jvm in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

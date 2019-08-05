@@ -3,11 +3,11 @@
     Lists all existing collector registrations
 .DESCRIPTION
     Lists all existing collector registrations
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/collectors in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLPluginsSystemCollectorsAll 
+    Get-GLPluginsSystemCollectorsAll
 .NOTES
     Auto generated
 #>

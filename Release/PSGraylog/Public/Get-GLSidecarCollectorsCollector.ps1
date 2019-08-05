@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Show collector details
 .DESCRIPTION
     Show collector details
-    
+
 
     For more information about this cmdlet - please search for /sidecar/collectors/{id} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

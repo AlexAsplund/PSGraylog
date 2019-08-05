@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get details about the installations of a content pack
 .DESCRIPTION
     Get details about the installations of a content pack
-    
+
 
     For more information about this cmdlet - please search for /system/content_packs/{contentPackId}/installations in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

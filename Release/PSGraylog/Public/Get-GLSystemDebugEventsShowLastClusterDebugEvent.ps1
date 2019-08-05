@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Show last received cluster debug event.
 .DESCRIPTION
     Show last received cluster debug event.
-    
+
 
     For more information about this cmdlet - please search for /system/debug/events/cluster in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemDebugEventsShowLastClusterDebugEvent 
+    Get-GLSystemDebugEventsShowLastClusterDebugEvent
 .NOTES
     Auto generated
 #>

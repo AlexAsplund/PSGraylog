@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     List all installed plugins on the given node
 .DESCRIPTION
     List all installed plugins on the given node
-    
+
 
     For more information about this cmdlet - please search for /cluster/{nodeId}/plugins in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

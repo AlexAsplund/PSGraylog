@@ -3,11 +3,11 @@
     Get a list of all dashboards and all configurations of their widgets.
 .DESCRIPTION
     Get a list of all dashboards and all configurations of their widgets.
-    
+
 
     For more information about this cmdlet - please search for /dashboards in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLDashboardsAll 
+    Get-GLDashboardsAll
 .NOTES
     Auto generated
 #>

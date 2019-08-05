@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Information about a node.
 .DESCRIPTION

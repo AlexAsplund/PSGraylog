@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create an output
 .DESCRIPTION
     Create an output
-    
+
 
     For more information about this cmdlet - please search for /system/outputs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

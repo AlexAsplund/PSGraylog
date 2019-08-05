@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     List available caches
 .DESCRIPTION
     List available caches
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/caches in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

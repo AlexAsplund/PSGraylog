@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of reopened indices, which will not be cleaned by retention cleaning
 .DESCRIPTION
     Get a list of reopened indices, which will not be cleaned by retention cleaning
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/reopened in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Open-GLIndexerIndicesReed 
+    Open-GLIndexerIndicesReed
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create a new saved search
 .DESCRIPTION
     Create a new saved search
-    
+
 
     For more information about this cmdlet - please search for /search/saved in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

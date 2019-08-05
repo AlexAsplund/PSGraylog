@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Set a collector action
 .DESCRIPTION
     Set a collector action
-    
+
 
     For more information about this cmdlet - please search for /sidecar/action/{sidecarId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

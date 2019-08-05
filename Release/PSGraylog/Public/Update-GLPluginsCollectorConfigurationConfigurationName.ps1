@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Updates a collector configuration name
 .DESCRIPTION
     Updates a collector configuration name
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/configurations/{id}/name in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

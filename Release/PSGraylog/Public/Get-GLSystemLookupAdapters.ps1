@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     List available data adapters
 .DESCRIPTION
     List available data adapters
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/adapters in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

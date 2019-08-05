@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create a new user account.
 .DESCRIPTION
     Create a new user account.
-    
+
 
     For more information about this cmdlet - please search for /users in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Resume a stream
 .DESCRIPTION
     Resume a stream
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId}/resume in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

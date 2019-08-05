@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all available output modules
 .DESCRIPTION
     Get all available output modules
-    
+
 
     For more information about this cmdlet - please search for /system/outputs/available in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemOutputsAvailable 
+    Get-GLSystemOutputsAvailable
 .NOTES
     Auto generated
 #>

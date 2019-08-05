@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all metrics
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/metrics in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemMetricsMetrics 
+    Get-GLSystemMetricsMetrics
 .NOTES
     Auto generated
 #>

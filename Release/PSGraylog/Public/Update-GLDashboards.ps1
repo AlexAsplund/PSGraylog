@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update the settings of a dashboard.
 .DESCRIPTION
     Update the settings of a dashboard.
-    
+
 
     For more information about this cmdlet - please search for /dashboards/{dashboardId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

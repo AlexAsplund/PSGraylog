@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Show JSON schema for configuration of given rotation strategies
 .DESCRIPTION

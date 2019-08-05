@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Set the loglevel of a whole subsystem
 .DESCRIPTION

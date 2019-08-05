@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Install a revision of a content pack
 .DESCRIPTION
     Install a revision of a content pack
-    
+
 
     For more information about this cmdlet - please search for /system/content_packs/{contentPackId}/{revision}/installations in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

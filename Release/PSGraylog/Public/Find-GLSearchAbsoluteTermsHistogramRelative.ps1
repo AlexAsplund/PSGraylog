@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Most common field terms of a query over time using an absolute timerange.
 .DESCRIPTION
     Most common field terms of a query over time using an absolute timerange.
-    
+
 
     For more information about this cmdlet - please search for /search/universal/absolute/terms-histogram in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

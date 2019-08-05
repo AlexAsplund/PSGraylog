@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Finds master node and triggers deflector cycle
 .DESCRIPTION
     Finds master node and triggers deflector cycle
-    
+
 
     For more information about this cmdlet - please search for /cluster/deflector/cycle in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Start-GLClusterDeflectorCycle 
+    Start-GLClusterDeflectorCycle
 .NOTES
     Auto generated
 #>

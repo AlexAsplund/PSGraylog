@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update a saved search
 .DESCRIPTION
     Update a saved search
-    
+
 
     For more information about this cmdlet - please search for /search/saved/{searchId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

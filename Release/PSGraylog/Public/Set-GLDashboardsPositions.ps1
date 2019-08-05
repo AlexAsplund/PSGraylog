@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update/set the positions of dashboard widgets.
 .DESCRIPTION
     Update/set the positions of dashboard widgets.
-    
+
 
     For more information about this cmdlet - please search for /dashboards/{dashboardId}/positions in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

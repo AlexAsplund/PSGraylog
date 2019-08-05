@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get detailed API documentation of a single resource
 .DESCRIPTION
     Get detailed API documentation of a single resource
-    
+
 
     For more information about this cmdlet - please search for /api-docs/{route: .+} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

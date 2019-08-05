@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Dismiss auto-showing getting started guide for this version
 .DESCRIPTION
     Dismiss auto-showing getting started guide for this version
-    
+
 
     For more information about this cmdlet - please search for /system/gettingstarted/dismiss in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemGettingStartedGuidesDismisstingStarted 
+    Get-GLSystemGettingStartedGuidesDismisstingStarted
 .NOTES
     Auto generated
 #>

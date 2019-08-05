@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Message search with absolute timerange.
 .DESCRIPTION

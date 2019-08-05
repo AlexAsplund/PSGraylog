@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Show configuration details
 .DESCRIPTION
     Show configuration details
-    
+
 
     For more information about this cmdlet - please search for /sidecar/configurations/{id} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get pipeline connections for the given stream
 .DESCRIPTION
     Get pipeline connections for the given stream
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/connections/{streamId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

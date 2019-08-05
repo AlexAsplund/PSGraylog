@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List latest available content packs
 .DESCRIPTION
     List latest available content packs
-    
+
 
     For more information about this cmdlet - please search for /system/content_packs/latest in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemContentPacksLatestContentPacks 
+    Get-GLSystemContentPacksLatestContentPacks
 .NOTES
     Auto generated
 #>

@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Export message search with keyword as timerange.
 .DESCRIPTION

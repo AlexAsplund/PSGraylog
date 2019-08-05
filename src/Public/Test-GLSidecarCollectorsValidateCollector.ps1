@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Validates collector parameters
 .DESCRIPTION
     Validates collector parameters
-    
+
 
     For more information about this cmdlet - please search for /sidecar/collectors/validate in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

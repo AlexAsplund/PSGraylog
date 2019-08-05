@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Retrieve the named lookup table
 .DESCRIPTION
     Retrieve the named lookup table
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/tables/{idOrName} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

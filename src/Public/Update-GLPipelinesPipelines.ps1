@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Modify a processing pipeline
 .DESCRIPTION

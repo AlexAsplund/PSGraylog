@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete an alarm callback
 .DESCRIPTION
     Delete an alarm callback
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/alarmcallbacks/{alarmCallbackId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

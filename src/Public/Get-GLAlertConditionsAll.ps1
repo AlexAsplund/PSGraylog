@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of all alert conditions
 .DESCRIPTION
     Get a list of all alert conditions
-    
+
 
     For more information about this cmdlet - please search for /alerts/conditions in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLAlertConditionsAll 
+    Get-GLAlertConditionsAll
 .NOTES
     Auto generated
 #>

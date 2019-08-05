@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Retrieves the list of access tokens for a user
 .DESCRIPTION
     Retrieves the list of access tokens for a user
-    
+
 
     For more information about this cmdlet - please search for /users/{username}/tokens in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

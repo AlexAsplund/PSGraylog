@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Generates a new access token for a user
 .DESCRIPTION
     Generates a new access token for a user
-    
+
 
     For more information about this cmdlet - please search for /users/{username}/tokens/{name} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
@@ -17,7 +17,7 @@ function New-GLUsersGenerateToken {
         # Parameter username
         [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
         [string]$Username,
-        # Descriptive name for this token (e.g. 'cronjob') 
+        # Descriptive name for this token (e.g. 'cronjob')
         [Parameter(Mandatory = $True,ValueFromPipelineByPropertyName = $true)]
         [string]$Name,
         # Placeholder because POST requests should have a body. Set to '{}', the content will be ignored.

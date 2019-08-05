@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get stats of all index sets
 .DESCRIPTION
     Get stats of all index sets
-    
+
 
     For more information about this cmdlet - please search for /system/indices/index_sets/stats in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemIndexSetsGlobalStats 
+    Get-GLSystemIndexSetsGlobalStats
 .NOTES
     Auto generated
 #>

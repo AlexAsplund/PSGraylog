@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Simulate the execution of the pipeline message processor
 .DESCRIPTION
     Simulate the execution of the pipeline message processor
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/simulate in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

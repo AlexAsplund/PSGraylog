@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Pass back rendered collector configuratin
 .DESCRIPTION

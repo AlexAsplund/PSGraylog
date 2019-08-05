@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all loggers of all nodes and their current levels
 .DESCRIPTION
     List all loggers of all nodes and their current levels
-    
+
 
     For more information about this cmdlet - please search for /cluster/system/loggers in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLClusterSystemLoggersLoggers 
+    Get-GLClusterSystemLoggersLoggers
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Returns at most one collector summary for the specified collector id
 .DESCRIPTION
     Returns at most one collector summary for the specified collector id
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/collectors/{collectorId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

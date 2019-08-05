@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a single message.
 .DESCRIPTION
     Get a single message.
-    
+
 
     For more information about this cmdlet - please search for /messages/{index}/{messageId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Set collector actions in bulk
 .DESCRIPTION
     Set collector actions in bulk
-    
+
 
     For more information about this cmdlet - please search for /sidecar/administration/action in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get system overview
 .DESCRIPTION
     Get system overview
-    
+
 
     For more information about this cmdlet - please search for /system in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemSystem 
+    Get-GLSystemSystem
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete output from configuration
 .DESCRIPTION
     Delete output from configuration
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/configurations/{id}/outputs/{outputId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

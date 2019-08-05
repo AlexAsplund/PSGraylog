@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Assign configurations to sidecars
 .DESCRIPTION
     Assign configurations to sidecars
-    
+
 
     For more information about this cmdlet - please search for /sidecars/configurations in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all processing pipelines
 .DESCRIPTION
     Get all processing pipelines
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/pipeline in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLPipelinesPipelinesAll 
+    Get-GLPipelinesPipelinesAll
 .NOTES
     Auto generated
 #>

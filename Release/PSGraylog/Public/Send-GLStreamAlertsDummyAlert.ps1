@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Send a test mail for a given stream
 .DESCRIPTION
     Send a test mail for a given stream
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId}/alerts/sendDummyAlert in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

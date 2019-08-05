@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     List all extractors of an input
 .DESCRIPTION
     List all extractors of an input
-    
+
 
     For more information about this cmdlet - please search for /system/inputs/{inputId}/extractors in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

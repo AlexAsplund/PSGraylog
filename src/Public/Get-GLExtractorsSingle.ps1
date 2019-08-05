@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get information of a single extractor of an input
 .DESCRIPTION
     Get information of a single extractor of an input
-    
+
 
     For more information about this cmdlet - please search for /system/inputs/{inputId}/extractors/{extractorId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

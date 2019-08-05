@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Validate the data adapter config
 .DESCRIPTION
     Validate the data adapter config
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/adapters/validate in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

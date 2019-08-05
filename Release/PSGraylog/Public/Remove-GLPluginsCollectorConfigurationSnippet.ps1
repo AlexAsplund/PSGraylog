@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete snippet from configuration
 .DESCRIPTION
     Delete snippet from configuration
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/configurations/{id}/snippets/{snippetId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

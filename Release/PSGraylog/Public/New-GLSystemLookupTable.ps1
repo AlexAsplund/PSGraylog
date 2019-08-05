@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create a new lookup table
 .DESCRIPTION
     Create a new lookup table
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/tables in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

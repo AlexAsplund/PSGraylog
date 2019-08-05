@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get system overview of all Graylog nodes
 .DESCRIPTION
     Get system overview of all Graylog nodes
-    
+
 
     For more information about this cmdlet - please search for /cluster in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLCluster 
+    Get-GLCluster
 .NOTES
     Auto generated
 #>

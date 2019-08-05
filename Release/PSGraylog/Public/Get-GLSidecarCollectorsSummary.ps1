@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     List a summary of all collectors
 .DESCRIPTION
     List a summary of all collectors
-    
+
 
     For more information about this cmdlet - please search for /sidecar/collectors/summary in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

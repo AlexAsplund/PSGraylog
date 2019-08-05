@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Ordered field terms of a query computed on another field using an absolute timerange.
 .DESCRIPTION
     Ordered field terms of a query computed on another field using an absolute timerange.
-    
+
 
     For more information about this cmdlet - please search for /search/universal/absolute/termsstats in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

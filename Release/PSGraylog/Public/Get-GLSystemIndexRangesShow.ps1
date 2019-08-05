@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Show single index range
 .DESCRIPTION
     Show single index range
-    
+
 
     For more information about this cmdlet - please search for /system/indices/ranges/{index: [a-z_0-9]+} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

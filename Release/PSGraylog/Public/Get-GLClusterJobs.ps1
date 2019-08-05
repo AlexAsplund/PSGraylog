@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List currently running jobs
 .DESCRIPTION
     List currently running jobs
-    
+
 
     For more information about this cmdlet - please search for /cluster/jobs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLClusterJobs 
+    Get-GLClusterJobs
 .NOTES
     Auto generated
 #>

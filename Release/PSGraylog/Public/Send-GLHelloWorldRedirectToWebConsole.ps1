@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Redirecting to web console if it runs on same port.
 .DESCRIPTION
     Redirecting to web console if it runs on same port.
-    
+
 
     For more information about this cmdlet - please search for  in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Send-GLHelloWorldRedirectToWebConsole 
+    Send-GLHelloWorldRedirectToWebConsole
 .NOTES
     Auto generated
 #>

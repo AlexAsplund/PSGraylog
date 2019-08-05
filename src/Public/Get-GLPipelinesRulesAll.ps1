@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all processing rules
 .DESCRIPTION
     Get all processing rules
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/rule in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLPipelinesRulesAll 
+    Get-GLPipelinesRulesAll
 .NOTES
     Auto generated
 #>

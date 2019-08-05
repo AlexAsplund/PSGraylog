@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get message processor configuration
 .DESCRIPTION
     Get message processor configuration
-    
+
 
     For more information about this cmdlet - please search for /system/messageprocessors/config in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemMessageProcessorsConfig 
+    Get-GLSystemMessageProcessorsConfig
 .NOTES
     Auto generated
 #>

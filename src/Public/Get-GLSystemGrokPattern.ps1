@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the existing grok pattern
 .DESCRIPTION
     Get the existing grok pattern
-    
+
 
     For more information about this cmdlet - please search for /system/grok/{patternId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

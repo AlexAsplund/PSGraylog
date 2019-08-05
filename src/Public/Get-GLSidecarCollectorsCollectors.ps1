@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all collectors
 .DESCRIPTION
     List all collectors
-    
+
 
     For more information about this cmdlet - please search for /sidecar/collectors in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSidecarCollectorsCollectors 
+    Get-GLSidecarCollectorsCollectors
 .NOTES
     Auto generated
 #>

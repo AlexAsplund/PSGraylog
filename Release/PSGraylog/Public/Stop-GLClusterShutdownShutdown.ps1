@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Shutdown node gracefully.
 .DESCRIPTION

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Add a static field to an input
 .DESCRIPTION
     Add a static field to an input
-    
+
 
     For more information about this cmdlet - please search for /system/inputs/{inputId}/staticfields in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update authentication providers configuration
 .DESCRIPTION
     Update authentication providers configuration
-    
+
 
     For more information about this cmdlet - please search for /system/authentication/config in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

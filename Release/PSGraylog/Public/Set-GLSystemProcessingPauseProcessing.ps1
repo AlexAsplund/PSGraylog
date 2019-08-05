@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Pauses message processing
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/processing/pause in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Set-GLSystemProcessingPauseProcessing 
+    Set-GLSystemProcessingPauseProcessing
 .NOTES
     Auto generated
 #>

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get relevant configuration settings and their values
 .DESCRIPTION
     Get relevant configuration settings and their values
-    
+
 
     For more information about this cmdlet - please search for /system/configuration in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemConfigurationRelevant 
+    Get-GLSystemConfigurationRelevant
 .NOTES
     Auto generated
 #>

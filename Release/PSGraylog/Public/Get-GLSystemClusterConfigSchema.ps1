@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get JSON schema of configuration class
 .DESCRIPTION
     Get JSON schema of configuration class
-    
+
 
     For more information about this cmdlet - please search for /system/cluster_config/{configClass} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

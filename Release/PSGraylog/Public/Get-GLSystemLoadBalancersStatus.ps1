@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get status of this Graylog server node for load balancers. Returns ALIVE with HTTP 200, DEAD with HTTP 503, or THROTTLED with HTTP 429.
 .DESCRIPTION
     Get status of this Graylog server node for load balancers. Returns ALIVE with HTTP 200, DEAD with HTTP 503, or THROTTLED with HTTP 429.
-    
+
 
     For more information about this cmdlet - please search for /system/lbstatus in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemLoadBalancersStatus 
+    Get-GLSystemLoadBalancersStatus
 .NOTES
     Auto generated
 #>

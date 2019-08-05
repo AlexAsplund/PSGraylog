@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Revoke all permissions for a user without deleting the account.
 .DESCRIPTION
     Revoke all permissions for a user without deleting the account.
-    
+
 
     For more information about this cmdlet - please search for /users/{username}/permissions in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

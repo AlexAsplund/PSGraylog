@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all active nodes in this cluster.
 .DESCRIPTION
     List all active nodes in this cluster.
-    
+
 
     For more information about this cmdlet - please search for /system/cluster/nodes in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemClusterNodes 
+    Get-GLSystemClusterNodes
 .NOTES
     Auto generated
 #>

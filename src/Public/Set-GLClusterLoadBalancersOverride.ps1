@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Override load balancer status of this graylog-server node. Next lifecycle change will override it again to its default. Set to ALIVE, DEAD, or THROTTLED.
 .DESCRIPTION
     Override load balancer status of this graylog-server node. Next lifecycle change will override it again to its default. Set to ALIVE, DEAD, or THROTTLED.
-    
+
 
     For more information about this cmdlet - please search for /cluster/{nodeId}/lbstatus/override/{status} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

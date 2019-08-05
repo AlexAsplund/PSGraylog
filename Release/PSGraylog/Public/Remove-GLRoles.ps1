@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Remove the named role and dissociate any users from it
 .DESCRIPTION
     Remove the named role and dissociate any users from it
-    
+
 
     For more information about this cmdlet - please search for /roles/{rolename} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

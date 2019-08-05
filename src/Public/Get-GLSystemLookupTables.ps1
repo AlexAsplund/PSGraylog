@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     List configured lookup tables
 .DESCRIPTION
     List configured lookup tables
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/tables in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Removes a user account.
 .DESCRIPTION
     Removes a user account.
-    
+
 
     For more information about this cmdlet - please search for /users/{username} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

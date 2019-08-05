@@ -3,7 +3,7 @@
     List all configurations
 .DESCRIPTION
     List all configurations
-    
+
 
     For more information about this cmdlet - please search for /sidecar/configurations in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

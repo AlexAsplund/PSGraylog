@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Remove the LDAP configuration
 .DESCRIPTION
     Remove the LDAP configuration
-    
+
 
     For more information about this cmdlet - please search for /system/ldap/settings in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Remove-GLSystemLDAPLdaptings 
+    Remove-GLSystemLDAPLdaptings
 .NOTES
     Auto generated
 #>

@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Rebuild/sync index range information for the given index set.
 .DESCRIPTION

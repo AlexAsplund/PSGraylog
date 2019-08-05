@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get configuration settings from database
 .DESCRIPTION
     Get configuration settings from database
-    
+
 
     For more information about this cmdlet - please search for /system/cluster_config/{configClass} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

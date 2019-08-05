@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete a widget
 .DESCRIPTION
     Delete a widget
-    
+
 
     For more information about this cmdlet - please search for /dashboards/{dashboardId}/widgets/{widgetId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

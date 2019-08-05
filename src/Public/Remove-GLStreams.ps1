@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete a stream
 .DESCRIPTION
     Delete a stream
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

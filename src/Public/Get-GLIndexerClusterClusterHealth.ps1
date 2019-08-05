@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get cluster and shard health overview
 .DESCRIPTION
     Get cluster and shard health overview
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/cluster/health in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLIndexerClusterClusterHealth 
+    Get-GLIndexerClusterClusterHealth
 .NOTES
     Auto generated
 #>

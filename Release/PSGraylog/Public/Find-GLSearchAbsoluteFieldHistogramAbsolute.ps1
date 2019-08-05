@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Field value histogram of a query using an absolute timerange.
 .DESCRIPTION
     Field value histogram of a query using an absolute timerange.
-    
+
 
     For more information about this cmdlet - please search for /search/universal/absolute/fieldhistogram in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

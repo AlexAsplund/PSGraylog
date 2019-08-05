@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Retrieve authentication providers configuration
 .DESCRIPTION
     Retrieve authentication providers configuration
-    
+
 
     For more information about this cmdlet - please search for /system/authentication/config in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemAuthenticationAuthenticators 
+    Get-GLSystemAuthenticationAuthenticators
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the values of multiple metrics at once
 .DESCRIPTION
     Get the values of multiple metrics at once
-    
+
 
     For more information about this cmdlet - please search for /system/metrics/multiple in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all configuration classes
 .DESCRIPTION
     List all configuration classes
-    
+
 
     For more information about this cmdlet - please search for /system/cluster_config in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemClusterConfig 
+    Get-GLSystemClusterConfig
 .NOTES
     Auto generated
 #>

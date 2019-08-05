@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of all index ranges
 .DESCRIPTION
     Get a list of all index ranges
-    
+
 
     For more information about this cmdlet - please search for /system/indices/ranges in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemIndexRanges 
+    Get-GLSystemIndexRanges
 .NOTES
     Auto generated
 #>

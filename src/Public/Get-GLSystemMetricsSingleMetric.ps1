@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a single metric
 .DESCRIPTION
     Get a single metric
-    
+
 
     For more information about this cmdlet - please search for /system/metrics/{metricName} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

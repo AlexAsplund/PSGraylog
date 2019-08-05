@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Create/update a collector registration
 .DESCRIPTION

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List current status of ServiceManager
 .DESCRIPTION
     List current status of ServiceManager
-    
+
 
     For more information about this cmdlet - please search for /system/serviceManager in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemServiceManager 
+    Get-GLSystemServiceManager
 .NOTES
     Auto generated
 #>

@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Networking information about this node.
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/stats/network in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemStatsNetworkStats 
+    Get-GLSystemStatsNetworkStats
 .NOTES
     Auto generated
 #>

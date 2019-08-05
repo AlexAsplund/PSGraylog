@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all available stream types
 .DESCRIPTION
     Get all available stream types
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/rules/types in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

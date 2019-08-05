@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update a stream rule
 .DESCRIPTION
     Update a stream rule
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/rules/{streamRuleId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

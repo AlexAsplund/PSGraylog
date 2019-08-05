@@ -3,7 +3,7 @@
     Render preview of a configuration template
 .DESCRIPTION
     Render preview of a configuration template
-    
+
 
     For more information about this cmdlet - please search for /sidecar/configurations/render/preview in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

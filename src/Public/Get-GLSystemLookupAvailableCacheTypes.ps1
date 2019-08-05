@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List available caches types
 .DESCRIPTION
     List available caches types
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/types/caches in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemLookupAvailableCacheTypes 
+    Get-GLSystemLookupAvailableCacheTypes
 .NOTES
     Auto generated
 #>

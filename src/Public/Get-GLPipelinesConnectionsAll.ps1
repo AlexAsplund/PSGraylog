@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all pipeline connections
 .DESCRIPTION
     Get all pipeline connections
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/connections in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLPipelinesConnectionsAll 
+    Get-GLPipelinesConnectionsAll
 .NOTES
     Auto generated
 #>

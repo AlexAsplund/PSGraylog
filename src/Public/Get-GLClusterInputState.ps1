@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all input states
 .DESCRIPTION
     Get all input states
-    
+
 
     For more information about this cmdlet - please search for /cluster/inputstates in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLClusterInputState 
+    Get-GLClusterInputState
 .NOTES
     Auto generated
 #>

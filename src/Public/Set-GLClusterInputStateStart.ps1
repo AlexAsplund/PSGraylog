@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Start or restart specified input in all nodes
 .DESCRIPTION
     Start or restart specified input in all nodes
-    
+
 
     For more information about this cmdlet - please search for /cluster/inputstates/{inputId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

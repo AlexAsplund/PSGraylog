@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get JVM information
 .DESCRIPTION
     Get JVM information
-    
+
 
     For more information about this cmdlet - please search for /system/jvm in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemJvm 
+    Get-GLSystemJvm
 .NOTES
     Auto generated
 #>

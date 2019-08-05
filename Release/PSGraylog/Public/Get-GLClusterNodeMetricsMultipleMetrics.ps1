@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the values of multiple metrics at once from node
 .DESCRIPTION
     Get the values of multiple metrics at once from node
-    
+
 
     For more information about this cmdlet - please search for /cluster/{nodeId}/metrics/multiple in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

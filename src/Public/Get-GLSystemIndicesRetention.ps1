@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     List available retention strategies
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/indices/retention/strategies in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemIndicesRetention 
+    Get-GLSystemIndicesRetention
 .NOTES
     Auto generated
 #>

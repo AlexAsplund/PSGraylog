@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get specific output
 .DESCRIPTION
     Get specific output
-    
+
 
     For more information about this cmdlet - please search for /system/outputs/{outputId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

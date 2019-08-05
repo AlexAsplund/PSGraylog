@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List available content packs
 .DESCRIPTION
     List available content packs
-    
+
 
     For more information about this cmdlet - please search for /system/content_packs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemContentPacksContentPacks 
+    Get-GLSystemContentPacksContentPacks
 .NOTES
     Auto generated
 #>

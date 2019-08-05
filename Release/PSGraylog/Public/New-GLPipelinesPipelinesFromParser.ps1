@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create a processing pipeline from source
 .DESCRIPTION
     Create a processing pipeline from source
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/pipeline in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

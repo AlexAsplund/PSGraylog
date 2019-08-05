@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete an index. This will also trigger an index ranges rebuild job.
 .DESCRIPTION
     Delete an index. This will also trigger an index ranges rebuild job.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/{index} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

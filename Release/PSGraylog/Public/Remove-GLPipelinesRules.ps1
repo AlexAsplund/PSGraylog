@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete a processing rule
 .DESCRIPTION

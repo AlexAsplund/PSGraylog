@@ -3,11 +3,11 @@
     Total number of messages in all your indices.
 .DESCRIPTION
     Total number of messages in all your indices.
-    
+
 
     For more information about this cmdlet - please search for /count/total in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLCountsTotalAll 
+    Get-GLCountsTotalAll
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of all alarm callbacks for this stream
 .DESCRIPTION
     Get a list of all alarm callbacks for this stream
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/alerts/{alertId}/history in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

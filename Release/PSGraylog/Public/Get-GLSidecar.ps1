@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Returns at most one Sidecar summary for the specified id
 .DESCRIPTION
     Returns at most one Sidecar summary for the specified id
-    
+
 
     For more information about this cmdlet - please search for /sidecars/{sidecarId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

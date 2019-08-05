@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Cycle deflector to new/next index
 .DESCRIPTION
     Cycle deflector to new/next index
-    
+
 
     For more information about this cmdlet - please search for /system/deflector/cycle in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    New-GLSystemDeflectorDeprecatedCycle 
+    New-GLSystemDeflectorDeprecatedCycle
 .NOTES
     Auto generated
 #>

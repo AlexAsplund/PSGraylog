@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get supported locales
 .DESCRIPTION
     Get supported locales
-    
+
 
     For more information about this cmdlet - please search for /system/locales in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemLocales 
+    Get-GLSystemLocales
 .NOTES
     Auto generated
 #>

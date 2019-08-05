@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Get history of a single metric
 .DESCRIPTION

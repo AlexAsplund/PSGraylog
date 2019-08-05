@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update description of a widget
 .DESCRIPTION
     Update description of a widget
-    
+
 
     For more information about this cmdlet - please search for /dashboards/{dashboardId}/widgets/{widgetId}/description in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

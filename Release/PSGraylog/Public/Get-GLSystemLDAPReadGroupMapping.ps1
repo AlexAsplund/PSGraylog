@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the LDAP group to Graylog role mapping
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/ldap/settings/groups in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemLDAPReadGroupMapping 
+    Get-GLSystemLDAPReadGroupMapping
 .NOTES
     Auto generated
 #>

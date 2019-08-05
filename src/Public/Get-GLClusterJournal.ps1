@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get message journal information of a given node
 .DESCRIPTION
     Get message journal information of a given node
-    
+
 
     For more information about this cmdlet - please search for /cluster/{nodeId}/journal in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

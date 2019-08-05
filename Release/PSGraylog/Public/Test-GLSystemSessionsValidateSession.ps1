@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Validate an existing session
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/sessions in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Test-GLSystemSessionsValidateSession 
+    Test-GLSystemSessionsValidateSession
 .NOTES
     Auto generated
 #>

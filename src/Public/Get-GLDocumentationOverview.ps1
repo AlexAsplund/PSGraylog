@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get API documentation
 .DESCRIPTION
     Get API documentation
-    
+
 
     For more information about this cmdlet - please search for /api-docs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLDocumentationOverview 
+    Get-GLDocumentationOverview
 .NOTES
     Auto generated
 #>

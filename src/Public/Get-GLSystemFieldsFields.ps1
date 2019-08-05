@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Get list of message fields that exist
 .DESCRIPTION

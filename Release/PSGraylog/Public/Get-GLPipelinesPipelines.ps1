@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a processing pipeline
 .DESCRIPTION

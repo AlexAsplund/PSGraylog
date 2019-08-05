@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Copy a collector
 .DESCRIPTION
     Copy a collector
-    
+
 
     For more information about this cmdlet - please search for /sidecar/collectors/{id}/{name} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

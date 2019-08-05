@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Retrieve the role's members
 .DESCRIPTION
     Retrieve the role's members
-    
+
 
     For more information about this cmdlet - please search for /roles/{rolename}/members in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

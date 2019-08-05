@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Stop specified input on this node
 .DESCRIPTION
     Stop specified input on this node
-    
+
 
     For more information about this cmdlet - please search for /system/inputstates/{inputId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the LDAP configuration if it is configured
 .DESCRIPTION
     Get the LDAP configuration if it is configured
-    
+
 
     For more information about this cmdlet - please search for /system/ldap/settings in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemLDAPLdaptings 
+    Get-GLSystemLDAPLdaptings
 .NOTES
     Auto generated
 #>

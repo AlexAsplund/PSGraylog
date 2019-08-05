@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Validate the lookup table config
 .DESCRIPTION
     Validate the lookup table config
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/tables/validate in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

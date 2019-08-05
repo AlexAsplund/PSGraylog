@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete the given cache
 .DESCRIPTION

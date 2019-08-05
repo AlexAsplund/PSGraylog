@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Connect streams to a processing pipeline
 .DESCRIPTION
     Connect streams to a processing pipeline
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/connections/to_pipeline in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

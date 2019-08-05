@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Test existing alert condition
 .DESCRIPTION
     Test existing alert condition
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId}/alerts/conditions/{conditionId}/test in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

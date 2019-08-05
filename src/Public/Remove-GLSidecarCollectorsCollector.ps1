@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete a collector
 .DESCRIPTION
     Delete a collector
-    
+
 
     For more information about this cmdlet - please search for /sidecar/collectors/{id} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of failed index operations.
 .DESCRIPTION
     Get a list of failed index operations.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/failures in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get internal Graylog system messages
 .DESCRIPTION
     Get internal Graylog system messages
-    
+
 
     For more information about this cmdlet - please search for /system/messages in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

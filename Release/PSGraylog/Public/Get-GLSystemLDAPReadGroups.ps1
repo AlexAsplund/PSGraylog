@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the available LDAP groups
 .DESCRIPTION
     Get the available LDAP groups
-    
+
 
     For more information about this cmdlet - please search for /system/ldap/groups in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemLDAPReadGroups 
+    Get-GLSystemLDAPReadGroups
 .NOTES
     Auto generated
 #>

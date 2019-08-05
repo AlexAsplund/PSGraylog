@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Remove static field of an input
 .DESCRIPTION
     Remove static field of an input
-    
+
 
     For more information about this cmdlet - please search for /system/inputs/{inputId}/staticfields/{key} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

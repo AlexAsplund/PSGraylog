@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a single specified alarm callback for this stream
 .DESCRIPTION
     Get a single specified alarm callback for this stream
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/alarmcallbacks/{alarmCallbackId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Terminate an existing session
 .DESCRIPTION

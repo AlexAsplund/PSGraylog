@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get information of all specified indices and their shards.
 .DESCRIPTION
     Get information of all specified indices and their shards.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/multiple in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

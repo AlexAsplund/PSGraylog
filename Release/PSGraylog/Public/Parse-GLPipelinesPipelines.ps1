@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Parse a processing pipeline without saving it
 .DESCRIPTION
     Parse a processing pipeline without saving it
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/pipeline/parse in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

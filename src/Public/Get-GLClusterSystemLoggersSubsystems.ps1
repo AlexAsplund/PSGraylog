@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all logger subsystems and their current levels
 .DESCRIPTION
     List all logger subsystems and their current levels
-    
+
 
     For more information about this cmdlet - please search for /cluster/system/loggers/subsystems in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLClusterSystemLoggersSubsystems 
+    Get-GLClusterSystemLoggersSubsystems
 .NOTES
     Auto generated
 #>

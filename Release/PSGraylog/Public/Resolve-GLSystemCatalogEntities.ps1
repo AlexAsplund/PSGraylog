@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Resolve dependencies of entities and return their configuration
 .DESCRIPTION
     Resolve dependencies of entities and return their configuration
-    
+
 
     For more information about this cmdlet - please search for /system/catalog in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

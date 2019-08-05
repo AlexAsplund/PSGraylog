@@ -3,11 +3,11 @@
     Get a list of all saved searches
 .DESCRIPTION
     Get a list of all saved searches
-    
+
 
     For more information about this cmdlet - please search for /search/saved in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSearchSavedAll 
+    Get-GLSearchSavedAll
 .NOTES
     Auto generated
 #>

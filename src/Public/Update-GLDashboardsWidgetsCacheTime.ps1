@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update cache time of a widget
 .DESCRIPTION
     Update cache time of a widget
-    
+
 
     For more information about this cmdlet - please search for /dashboards/{dashboardId}/widgets/{widgetId}/cachetime in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

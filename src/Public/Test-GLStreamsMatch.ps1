@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Test matching of a stream against a supplied message
 .DESCRIPTION
     Test matching of a stream against a supplied message
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId}/testMatch in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

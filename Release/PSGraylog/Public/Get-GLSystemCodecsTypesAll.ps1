@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all codec types
 .DESCRIPTION
     Get all codec types
-    
+
 
     For more information about this cmdlet - please search for /system/codecs/types/all in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemCodecsTypesAll 
+    Get-GLSystemCodecsTypesAll
 .NOTES
     Auto generated
 #>

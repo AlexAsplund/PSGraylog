@@ -3,11 +3,11 @@
     Get a list of all streams
 .DESCRIPTION
     Get a list of all streams
-    
+
 
     For more information about this cmdlet - please search for /streams in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLStreamsAll 
+    Get-GLStreamsAll
 .NOTES
     Auto generated
 #>

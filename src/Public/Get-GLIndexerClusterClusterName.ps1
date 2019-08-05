@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the cluster name
 .DESCRIPTION
     Get the cluster name
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/cluster/name in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLIndexerClusterClusterName 
+    Get-GLIndexerClusterClusterName
 .NOTES
     Auto generated
 #>

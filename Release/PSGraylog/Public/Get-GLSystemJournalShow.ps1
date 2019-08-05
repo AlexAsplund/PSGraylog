@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get current state of the journal on this node.
 .DESCRIPTION
     Get current state of the journal on this node.
-    
+
 
     For more information about this cmdlet - please search for /system/journal in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemJournalShow 
+    Get-GLSystemJournalShow
 .NOTES
     Auto generated
 #>

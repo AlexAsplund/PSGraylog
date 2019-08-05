@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Check for triggered alert conditions of this streams. Results cached for 30 seconds.
 .DESCRIPTION
     Check for triggered alert conditions of this streams. Results cached for 30 seconds.
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId}/alerts/check in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

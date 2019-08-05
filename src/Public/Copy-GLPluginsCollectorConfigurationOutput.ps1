@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Copy a configuration output
 .DESCRIPTION

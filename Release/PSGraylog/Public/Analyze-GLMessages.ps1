@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Analyze a message string
 .DESCRIPTION

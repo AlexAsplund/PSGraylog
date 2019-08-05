@@ -3,11 +3,11 @@
     List all collector configurations
 .DESCRIPTION
     List all collector configurations
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/configurations in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLPluginsCollectorConfigurationConfigurationsAll 
+    Get-GLPluginsCollectorConfigurationConfigurationsAll
 .NOTES
     Auto generated
 #>

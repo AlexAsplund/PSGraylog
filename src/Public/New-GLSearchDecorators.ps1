@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Creates a message decoration configuration
 .DESCRIPTION
     Creates a message decoration configuration
-    
+
 
     For more information about this cmdlet - please search for /search/decorators in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

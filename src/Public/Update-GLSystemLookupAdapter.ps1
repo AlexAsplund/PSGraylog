@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update the given data adapter settings
 .DESCRIPTION
     Update the given data adapter settings
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/adapters/{idOrName} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

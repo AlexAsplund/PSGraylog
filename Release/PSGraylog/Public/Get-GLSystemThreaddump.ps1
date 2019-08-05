@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a thread dump
 .DESCRIPTION
     Get a thread dump
-    
+
 
     For more information about this cmdlet - please search for /system/threaddump in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemThreaddump 
+    Get-GLSystemThreaddump
 .NOTES
     Auto generated
 #>

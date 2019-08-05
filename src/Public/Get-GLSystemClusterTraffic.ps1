@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the cluster traffic stats
 .DESCRIPTION
     Get the cluster traffic stats
-    
+
 
     For more information about this cmdlet - please search for /system/cluster/traffic in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

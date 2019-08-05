@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create and send a cluster debug event.
 .DESCRIPTION
     Create and send a cluster debug event.
-    
+
 
     For more information about this cmdlet - please search for /system/debug/events/cluster in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

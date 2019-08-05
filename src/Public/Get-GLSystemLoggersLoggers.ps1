@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all loggers and their current levels
 .DESCRIPTION
     List all loggers and their current levels
-    
+
 
     For more information about this cmdlet - please search for /system/loggers in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemLoggersLoggers 
+    Get-GLSystemLoggersLoggers
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of closed indices that can be reopened.
 .DESCRIPTION
     Get a list of closed indices that can be reopened.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/{indexSetId}/closed in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

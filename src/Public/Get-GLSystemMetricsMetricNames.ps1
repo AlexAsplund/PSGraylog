@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all metrics keys/names
 .DESCRIPTION
     Get all metrics keys/names
-    
+
 
     For more information about this cmdlet - please search for /system/metrics/names in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemMetricsMetricNames 
+    Get-GLSystemMetricsMetricNames
 .NOTES
     Auto generated
 #>

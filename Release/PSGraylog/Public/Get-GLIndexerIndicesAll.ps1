@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all open, closed and reopened indices.
 .DESCRIPTION
     List all open, closed and reopened indices.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLIndexerIndicesAll 
+    Get-GLIndexerIndicesAll
 .NOTES
     Auto generated
 #>

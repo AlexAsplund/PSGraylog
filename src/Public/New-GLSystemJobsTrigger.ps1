@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Trigger new job
 .DESCRIPTION
     Trigger new job
-    
+
 
     For more information about this cmdlet - please search for /system/jobs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

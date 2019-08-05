@@ -3,11 +3,11 @@
     Get all inputs
 .DESCRIPTION
     Get all inputs
-    
+
 
     For more information about this cmdlet - please search for /system/inputs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemInputsAll 
+    Get-GLSystemInputsAll
 .NOTES
     Auto generated
 #>

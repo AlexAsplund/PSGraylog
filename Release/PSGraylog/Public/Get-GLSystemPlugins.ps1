@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List all installed plugins on this node.
 .DESCRIPTION
     List all installed plugins on this node.
-    
+
 
     For more information about this cmdlet - please search for /system/plugins in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemPlugins 
+    Get-GLSystemPlugins
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Datetime histogram of a query using keyword timerange.
 .DESCRIPTION
     Datetime histogram of a query using keyword timerange.
-    
+
 
     For more information about this cmdlet - please search for /search/universal/keyword/fieldhistogram in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

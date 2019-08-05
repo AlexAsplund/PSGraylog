@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Upload a content pack
 .DESCRIPTION
     Upload a content pack
-    
+
 
     For more information about this cmdlet - please search for /system/content_packs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Shutdown this node gracefully.
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/shutdown/shutdown in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Stop-GLSystemShutdownShutdown 
+    Stop-GLSystemShutdownShutdown
 .NOTES
     Auto generated
 #>

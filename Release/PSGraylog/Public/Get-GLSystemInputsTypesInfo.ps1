@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get information about a single input type
 .DESCRIPTION
     Get information about a single input type
-    
+
 
     For more information about this cmdlet - please search for /system/inputs/types/{inputType} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

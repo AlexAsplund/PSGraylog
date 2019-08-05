@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Show collector configuration details
 .DESCRIPTION
     Show collector configuration details
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/configurations/{id} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

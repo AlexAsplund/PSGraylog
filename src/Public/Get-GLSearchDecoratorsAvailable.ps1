@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Returns all available message decorations
 .DESCRIPTION
     Returns all available message decorations
-    
+
 
     For more information about this cmdlet - please search for /search/decorators/available in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSearchDecoratorsAvailable 
+    Get-GLSearchDecoratorsAvailable
 .NOTES
     Auto generated
 #>

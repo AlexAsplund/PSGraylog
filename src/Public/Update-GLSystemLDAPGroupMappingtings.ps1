@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Update the LDAP group to Graylog role mapping
 .DESCRIPTION

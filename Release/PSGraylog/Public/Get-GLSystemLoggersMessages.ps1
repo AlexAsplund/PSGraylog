@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get recent internal log messages
 .DESCRIPTION
     Get recent internal log messages
-    
+
 
     For more information about this cmdlet - please search for /system/loggers/messages/recent in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

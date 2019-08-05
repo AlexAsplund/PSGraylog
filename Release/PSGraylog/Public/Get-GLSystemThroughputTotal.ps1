@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Current throughput of this node in messages per second
 .DESCRIPTION
     Current throughput of this node in messages per second
-    
+
 
     For more information about this cmdlet - please search for /system/throughput in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemThroughputTotal 
+    Get-GLSystemThroughputTotal
 .NOTES
     Auto generated
 #>

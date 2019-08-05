@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Reopen a closed index. This will also trigger an index ranges rebuild job.
 .DESCRIPTION
     Reopen a closed index. This will also trigger an index ranges rebuild job.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/{index}/reopen in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

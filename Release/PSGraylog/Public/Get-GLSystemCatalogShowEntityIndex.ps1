@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List available entities in this Graylog cluster
 .DESCRIPTION
     List available entities in this Graylog cluster
-    
+
 
     For more information about this cmdlet - please search for /system/catalog in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemCatalogShowEntityIndex 
+    Get-GLSystemCatalogShowEntityIndex
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get alarms of all streams, filtered by specifying limit and offset parameters.
 .DESCRIPTION
     Get alarms of all streams, filtered by specifying limit and offset parameters.
-    
+
 
     For more information about this cmdlet - please search for /streams/alerts/paginated in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

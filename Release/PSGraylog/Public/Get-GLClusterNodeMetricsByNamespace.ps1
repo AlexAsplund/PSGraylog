@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all metrics of a namespace from node
 .DESCRIPTION
     Get all metrics of a namespace from node
-    
+
 
     For more information about this cmdlet - please search for /cluster/{nodeId}/metrics/namespace/{namespace} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

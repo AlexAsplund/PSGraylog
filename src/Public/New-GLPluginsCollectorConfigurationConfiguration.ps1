@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create new collector configuration
 .DESCRIPTION
     Create new collector configuration
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/configurations in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

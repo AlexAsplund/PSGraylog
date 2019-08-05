@@ -46,7 +46,7 @@ Properties {
 
     # Enable/disable use of PSScriptAnalyzer to perform script analysis.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $ScriptAnalysisEnabled = $false
+    $ScriptAnalysisEnabled = $true
 
     # When PSScriptAnalyzer is enabled, control which severity level will generate a build failure.
     # Valid values are Error, Warning, Information and None.  "None" will report errors but will not
@@ -117,11 +117,11 @@ Properties {
     # you will be prompted to enter your API key.  The build will store the key encrypted in the
     # settings file, so that on subsequent publishes you will no longer be prompted for the API key.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $NuGetApiKey = $null
+    $NuGetApiKey = $env:NuGetApiKey
 
     # Name of the repository you wish to publish to. If $null is specified the default repo (PowerShellGallery) is used.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $PublishRepository = $ENV:PSGallery
+    $PublishRepository = "PSGallery"
 
     # Path to the release notes file.  Set to $null if the release notes reside in the manifest file.
     # The contents of this file are used during publishing for the ReleaseNotes parameter.

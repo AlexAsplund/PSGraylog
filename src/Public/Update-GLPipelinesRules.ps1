@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Modify a processing rule
 .DESCRIPTION

@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Rebuild/sync index range information.
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/indices/ranges/rebuild in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemIndexRangesRebuild 
+    Get-GLSystemIndexRangesRebuild
 .NOTES
     Auto generated
 #>

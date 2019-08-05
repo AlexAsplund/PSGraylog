@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create a new collector
 .DESCRIPTION
     Create a new collector
-    
+
 
     For more information about this cmdlet - please search for /sidecar/collectors in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

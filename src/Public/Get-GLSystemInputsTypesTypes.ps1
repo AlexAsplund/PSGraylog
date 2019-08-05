@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all available input types of this node
 .DESCRIPTION
     Get all available input types of this node
-    
+
 
     For more information about this cmdlet - please search for /system/inputs/types in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemInputsTypesTypes 
+    Get-GLSystemInputsTypesTypes
 .NOTES
     Auto generated
 #>

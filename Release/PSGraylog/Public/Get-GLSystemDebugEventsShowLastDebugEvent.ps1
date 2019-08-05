@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Show last received local debug event.
 .DESCRIPTION
     Show last received local debug event.
-    
+
 
     For more information about this cmdlet - please search for /system/debug/events/local in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemDebugEventsShowLastDebugEvent 
+    Get-GLSystemDebugEventsShowLastDebugEvent
 .NOTES
     Auto generated
 #>

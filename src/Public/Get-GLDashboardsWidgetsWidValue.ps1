@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a single widget value.
 .DESCRIPTION
     Get a single widget value.
-    
+
 
     For more information about this cmdlet - please search for /dashboards/{dashboardId}/widgets/{widgetId}/value in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

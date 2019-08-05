@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a single dashboards and all configurations of its widgets.
 .DESCRIPTION
     Get a single dashboards and all configurations of its widgets.
-    
+
 
     For more information about this cmdlet - please search for /dashboards/{dashboardId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

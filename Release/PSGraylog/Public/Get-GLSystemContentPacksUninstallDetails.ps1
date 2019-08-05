@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get details about which entities will actually be uninstalled
 .DESCRIPTION
     Get details about which entities will actually be uninstalled
-    
+
 
     For more information about this cmdlet - please search for /system/content_packs/{contentPackId}/installations/{installationId}/uninstall_details in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

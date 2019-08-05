@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update extractor order of an input
 .DESCRIPTION
     Update extractor order of an input
-    
+
 
     For more information about this cmdlet - please search for /system/inputs/{inputId}/extractors/order in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

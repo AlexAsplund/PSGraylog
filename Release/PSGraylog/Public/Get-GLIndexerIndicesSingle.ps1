@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get information of an index and its shards.
 .DESCRIPTION
     Get information of an index and its shards.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/{index} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

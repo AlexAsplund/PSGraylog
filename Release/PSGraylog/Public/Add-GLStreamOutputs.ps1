@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Associate outputs with a stream
 .DESCRIPTION
     Associate outputs with a stream
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/outputs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

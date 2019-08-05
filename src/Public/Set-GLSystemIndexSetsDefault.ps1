@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Set default index set
 .DESCRIPTION
     Set default index set
-    
+
 
     For more information about this cmdlet - please search for /system/indices/index_sets/{id}/default in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Updates the index templates for all index sets in Elasticsearch
 .DESCRIPTION
     Updates the index templates for all index sets in Elasticsearch
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/templates/update in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Set-GLIndexerIndicesTemplatesSyncAll 
+    Set-GLIndexerIndicesTemplatesSyncAll
 .NOTES
     Auto generated
 #>

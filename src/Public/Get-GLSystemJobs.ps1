@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get information of a specific currently running job
 .DESCRIPTION
     Get information of a specific currently running job
-    
+
 
     For more information about this cmdlet - please search for /system/jobs/{jobId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -3,11 +3,11 @@
     List currently running jobs
 .DESCRIPTION
     List currently running jobs
-    
+
 
     For more information about this cmdlet - please search for /system/jobs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemJobsAll 
+    Get-GLSystemJobsAll
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Pause a stream
 .DESCRIPTION
     Pause a stream
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId}/pause in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the most recent alarms of this stream.
 .DESCRIPTION
     Get the most recent alarms of this stream.
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId}/alerts in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

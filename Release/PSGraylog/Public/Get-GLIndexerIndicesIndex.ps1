@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     List all open, closed and reopened indices.
 .DESCRIPTION
     List all open, closed and reopened indices.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/indices/{indexSetId}/list in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

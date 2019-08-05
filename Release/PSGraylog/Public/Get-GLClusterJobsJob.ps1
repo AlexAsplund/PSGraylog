@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get job with the given ID
 .DESCRIPTION
     Get job with the given ID
-    
+
 
     For more information about this cmdlet - please search for /cluster/jobs/{jobId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

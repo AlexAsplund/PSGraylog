@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Validate a configuration variable
 .DESCRIPTION
     Validate a configuration variable
-    
+
 
     For more information about this cmdlet - please search for /sidecar/configuration_variables/validate in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

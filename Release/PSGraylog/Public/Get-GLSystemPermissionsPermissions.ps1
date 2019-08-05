@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all available user permissions.
 .DESCRIPTION
     Get all available user permissions.
-    
+
 
     For more information about this cmdlet - please search for /system/permissions in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemPermissionsPermissions 
+    Get-GLSystemPermissionsPermissions
 .NOTES
     Auto generated
 #>

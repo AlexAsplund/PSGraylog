@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Remove a user from a role
 .DESCRIPTION
     Remove a user from a role
-    
+
 
     For more information about this cmdlet - please search for /roles/{rolename}/members/{username} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

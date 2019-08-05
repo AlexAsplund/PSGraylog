@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Resume message processing on node
 .DESCRIPTION
     Resume message processing on node
-    
+
 
     For more information about this cmdlet - please search for /cluster/{nodeId}/processing/resume in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

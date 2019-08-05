@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of all alarm callback types
 .DESCRIPTION
     Get a list of all alarm callback types
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamid}/alarmcallbacks/available in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

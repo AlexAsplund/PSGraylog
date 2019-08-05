@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Resume message processing
 .DESCRIPTION
     Resume message processing
-    
+
 
     For more information about this cmdlet - please search for /system/processing/resume in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Set-GLSystemProcessingResumeProcessing 
+    Set-GLSystemProcessingResumeProcessing
 .NOTES
     Auto generated
 #>

@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     List all users
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /users in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLUsersUsers 
+    Get-GLUsersUsers
 .NOTES
     Auto generated
 #>

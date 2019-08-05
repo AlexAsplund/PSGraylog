@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     List available data adapter types
 .DESCRIPTION
     List available data adapter types
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/types/adapters in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemLookupAvailableAdapterTypes 
+    Get-GLSystemLookupAvailableAdapterTypes
 .NOTES
     Auto generated
 #>

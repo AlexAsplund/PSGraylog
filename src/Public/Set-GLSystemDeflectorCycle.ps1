@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Cycle deflector to new/next index in index set
 .DESCRIPTION
     Cycle deflector to new/next index in index set
-    
+
 
     For more information about this cmdlet - please search for /system/deflector/{indexSetId}/cycle in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

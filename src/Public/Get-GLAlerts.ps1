@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get an alert by ID.
 .DESCRIPTION
     Get an alert by ID.
-    
+
 
     For more information about this cmdlet - please search for /streams/alerts/{alertId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

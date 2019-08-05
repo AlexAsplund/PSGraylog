@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     List all uploaded configurations
 .DESCRIPTION
     List all uploaded configurations
-    
+
 
     For more information about this cmdlet - please search for /sidecar/configurations/uploads in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

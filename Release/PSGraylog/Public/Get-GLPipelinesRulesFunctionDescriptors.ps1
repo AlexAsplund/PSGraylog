@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get function descriptors
 .DESCRIPTION
     Get function descriptors
-    
+
 
     For more information about this cmdlet - please search for /system/pipelines/rule/functions in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLPipelinesRulesFunctionDescriptors 
+    Get-GLPipelinesRulesFunctionDescriptors
 .NOTES
     Auto generated
 #>

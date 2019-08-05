@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Remove an alert receiver
 .DESCRIPTION
     Remove an alert receiver
-    
+
 
     For more information about this cmdlet - please search for /streams/{streamId}/alerts/receivers in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

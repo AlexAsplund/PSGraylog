@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Retrieve the runtime error states of the given lookup tables, caches and adapters
 .DESCRIPTION
     Retrieve the runtime error states of the given lookup tables, caches and adapters
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/errorstates in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

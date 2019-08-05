@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get input state for specified input id on this node
 .DESCRIPTION
     Get input state for specified input id on this node
-    
+
 
     For more information about this cmdlet - please search for /system/inputstates/{inputId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

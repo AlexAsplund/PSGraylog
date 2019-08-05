@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of all alarm callbacks
 .DESCRIPTION
     Get a list of all alarm callbacks
-    
+
 
     For more information about this cmdlet - please search for /alerts/callbacks in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLAlarmCallbacksAll 
+    Get-GLAlarmCallbacksAll
 .NOTES
     Auto generated
 #>

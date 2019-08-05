@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Create index set
 .DESCRIPTION
     Create index set
-    
+
 
     For more information about this cmdlet - please search for /system/indices/index_sets in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

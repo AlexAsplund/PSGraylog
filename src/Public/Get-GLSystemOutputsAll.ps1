@@ -3,11 +3,11 @@
     Get a list of all outputs
 .DESCRIPTION
     Get a list of all outputs
-    
+
 
     For more information about this cmdlet - please search for /system/outputs in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemOutputsAll 
+    Get-GLSystemOutputsAll
 .NOTES
     Auto generated
 #>

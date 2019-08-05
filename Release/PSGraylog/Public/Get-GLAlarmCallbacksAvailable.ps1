@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get a list of all alarm callbacks types
 .DESCRIPTION
     Get a list of all alarm callbacks types
-    
+
 
     For more information about this cmdlet - please search for /alerts/callbacks/types in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLAlarmCallbacksAvailable 
+    Get-GLAlarmCallbacksAvailable
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Most common field terms of a query over time using a relative timerange.
 .DESCRIPTION
     Most common field terms of a query over time using a relative timerange.
-    
+
 
     For more information about this cmdlet - please search for /search/universal/relative/terms-histogram in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

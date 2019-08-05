@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Most common field terms of a query using a keyword timerange.
 .DESCRIPTION
     Most common field terms of a query using a keyword timerange.
-    
+
 
     For more information about this cmdlet - please search for /search/universal/keyword/terms in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Query a lookup table
 .DESCRIPTION
     Query a lookup table
-    
+
 
     For more information about this cmdlet - please search for /system/lookup/tables/{name}/query in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

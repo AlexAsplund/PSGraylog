@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Process information about this node.
 .DESCRIPTION
@@ -7,7 +7,7 @@
 
     For more information about this cmdlet - please search for /system/stats/process in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemStatsProcessStats 
+    Get-GLSystemStatsProcessStats
 .NOTES
     Auto generated
 #>

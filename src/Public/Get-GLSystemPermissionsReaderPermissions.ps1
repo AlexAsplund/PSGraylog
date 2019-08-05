@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Get the initial permissions assigned to a reader account
 .DESCRIPTION
     Get the initial permissions assigned to a reader account
-    
+
 
     For more information about this cmdlet - please search for /system/permissions/reader/{username} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

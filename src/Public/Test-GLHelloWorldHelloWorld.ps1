@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     A few details about the Graylog node.
 .DESCRIPTION
     A few details about the Graylog node.
-    
+
 
     For more information about this cmdlet - please search for  in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Test-GLHelloWorldHelloWorld 
+    Test-GLHelloWorldHelloWorld
 .NOTES
     Auto generated
 #>

@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Delete input form configuration
 .DESCRIPTION
     Delete input form configuration
-    
+
 
     For more information about this cmdlet - please search for /plugins/org.graylog.plugins.collector/configurations/{id}/inputs/{inputId} in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

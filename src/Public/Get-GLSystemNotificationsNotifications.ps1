@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Get all active notifications
 .DESCRIPTION
     Get all active notifications
-    
+
 
     For more information about this cmdlet - please search for /system/notifications in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemNotificationsNotifications 
+    Get-GLSystemNotificationsNotifications
 .NOTES
     Auto generated
 #>

@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Check whether to display the Getting started guide for this version
 .DESCRIPTION
     Check whether to display the Getting started guide for this version
-    
+
 
     For more information about this cmdlet - please search for /system/gettingstarted in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSystemGettingStartedGuidesDisplaytingStarted 
+    Get-GLSystemGettingStartedGuidesDisplaytingStarted
 .NOTES
     Auto generated
 #>

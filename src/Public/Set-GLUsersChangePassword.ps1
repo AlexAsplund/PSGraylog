@@ -1,9 +1,9 @@
-﻿<#
+<#
 .SYNOPSIS
     Update the password for a user.
 .DESCRIPTION
     Update the password for a user.
-    
+
 
     For more information about this cmdlet - please search for /users/{username}/password in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE

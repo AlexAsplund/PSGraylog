@@ -3,11 +3,11 @@
     Get overview of current indexing state, including deflector config, cluster state, index ranges & message counts.
 .DESCRIPTION
     Get overview of current indexing state, including deflector config, cluster state, index ranges & message counts.
-    
+
 
     For more information about this cmdlet - please search for /system/indexer/overview in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLIndexerOverviewIndexAll 
+    Get-GLIndexerOverviewIndexAll
 .NOTES
     Auto generated
 #>

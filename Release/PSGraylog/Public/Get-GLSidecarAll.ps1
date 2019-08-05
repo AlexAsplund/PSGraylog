@@ -1,13 +1,13 @@
-﻿<#
+<#
 .SYNOPSIS
     Lists all existing Sidecar registrations
 .DESCRIPTION
     Lists all existing Sidecar registrations
-    
+
 
     For more information about this cmdlet - please search for /sidecars/all in the docs available at http(s)://your-graylog.fqdn/api/api-docs
 .EXAMPLE
-    Get-GLSidecarAll 
+    Get-GLSidecarAll
 .NOTES
     Auto generated
 #>

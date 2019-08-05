@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Field statistics for a query using a keyword timerange.
 .DESCRIPTION
